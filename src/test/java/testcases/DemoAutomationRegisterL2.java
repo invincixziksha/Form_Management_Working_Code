@@ -120,7 +120,6 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 		softAssert.assertEquals("todo", RegisterPageInstance.goToInterActionTabclickOnDragAndDropClickOnDynamicAndPerfomDragAndDropAction());
 	}	
 	
-	
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		System.out.println("before closing the browser");

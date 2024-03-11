@@ -5,7 +5,7 @@
       <![CDATA[Selected country Validated]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-03-11T15:33:40 IST" name="Suite" finished-at="2024-03-11T15:36:45 IST" duration-ms="185137">
+  <suite started-at="2024-03-11T16:26:51 IST" name="Suite" finished-at="2024-03-11T16:29:43 IST" duration-ms="171217">
     <groups>
       <group name="sanity">
         <method signature="DemoAutomationRegister.DemoRegisterAutomation()[pri:1, instance:testcases.DemoAutomationRegister@60975100]" name="DemoRegisterAutomation" class="testcases.DemoAutomationRegister"/>
@@ -22,9 +22,9 @@
         <method signature="DemoAutomationRegister.filltheRegisterFormAndValidateErrorMessage()[pri:12, instance:testcases.DemoAutomationRegister@60975100]" name="filltheRegisterFormAndValidateErrorMessage" class="testcases.DemoAutomationRegister"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2024-03-11T15:33:40 IST" name="Test" finished-at="2024-03-11T15:36:45 IST" duration-ms="185137">
+    <test started-at="2024-03-11T16:26:51 IST" name="Test" finished-at="2024-03-11T16:29:43 IST" duration-ms="171217">
       <class name="testcases.DemoAutomationRegister">
-        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:33:40 IST" name="initBrowser" finished-at="2024-03-11T15:33:56 IST" duration-ms="16065" status="PASS">
+        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:26:51 IST" name="initBrowser" finished-at="2024-03-11T16:27:04 IST" duration-ms="12780" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -40,58 +40,58 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method signature="DemoRegisterAutomation()[pri:1, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:33:56 IST" name="DemoRegisterAutomation" description="Navigate to the URL and Validate the Home Page" finished-at="2024-03-11T15:33:56 IST" duration-ms="233" status="PASS">
+        <test-method signature="DemoRegisterAutomation()[pri:1, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:04 IST" name="DemoRegisterAutomation" description="Navigate to the URL and Validate the Home Page" finished-at="2024-03-11T16:27:04 IST" duration-ms="85" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DemoRegisterAutomation -->
-        <test-method signature="clickOnSwitchToAlertAndValidateTitlePage()[pri:2, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:33:56 IST" name="clickOnSwitchToAlertAndValidateTitlePage" description="Click SwitchTo à Alert Link. and Validate if control is navigated to new page" finished-at="2024-03-11T15:34:00 IST" duration-ms="3761" status="PASS">
+        <test-method signature="clickOnSwitchToAlertAndValidateTitlePage()[pri:2, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:04 IST" name="clickOnSwitchToAlertAndValidateTitlePage" description="Click SwitchTo à Alert Link. and Validate if control is navigated to new page" finished-at="2024-03-11T16:27:07 IST" duration-ms="2990" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnSwitchToAlertAndValidateTitlePage -->
-        <test-method signature="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup()[pri:3, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:00 IST" name="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup" description="Click on button to display the alert box and Validate if alert popup is shown." finished-at="2024-03-11T15:34:03 IST" duration-ms="3153" status="PASS">
+        <test-method signature="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup()[pri:3, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:07 IST" name="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup" description="Click on button to display the alert box and Validate if alert popup is shown." finished-at="2024-03-11T16:27:10 IST" duration-ms="3099" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup -->
-        <test-method signature="clickOnRegisterLinkAndFillTheForms()[pri:4, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:03 IST" name="clickOnRegisterLinkAndFillTheForms" description="Click on Register menu option to navigate to Register page. and  Fill the form with data provided in excel sheet." finished-at="2024-03-11T15:34:13 IST" duration-ms="10291" status="PASS">
+        <test-method signature="clickOnRegisterLinkAndFillTheForms()[pri:4, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:10 IST" name="clickOnRegisterLinkAndFillTheForms" description="Click on Register menu option to navigate to Register page. and  Fill the form with data provided in excel sheet." finished-at="2024-03-11T16:27:21 IST" duration-ms="11108" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnRegisterLinkAndFillTheForms -->
-        <test-method signature="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne()[pri:5, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:13 IST" name="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne" description="Click on the country dropdown and Select each country option one by one." finished-at="2024-03-11T15:34:20 IST" duration-ms="6976" status="PASS">
+        <test-method signature="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne()[pri:5, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:22 IST" name="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne" description="Click on the country dropdown and Select each country option one by one." finished-at="2024-03-11T16:27:26 IST" duration-ms="4913" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne -->
-        <test-method signature="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown()[pri:6, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:20 IST" name="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown" description="Click on the country dropdown and Validate if each country option is selectable from the dropdown." finished-at="2024-03-11T15:34:26 IST" duration-ms="5316" status="PASS">
+        <test-method signature="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown()[pri:6, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:26 IST" name="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown" description="Click on the country dropdown and Validate if each country option is selectable from the dropdown." finished-at="2024-03-11T16:27:31 IST" duration-ms="4238" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Selected country Validated]]>
             </line>
           </reporter-output>
         </test-method> <!-- clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown -->
-        <test-method signature="checkAndUncheckEachCheckBoxAndValidateThatCheckBox()[pri:7, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:26 IST" name="checkAndUncheckEachCheckBoxAndValidateThatCheckBox" description=" Check and uncheck each hobby checkbox and Validate that the checkboxes are responding correctly to user interaction, allowing selection and deselection." finished-at="2024-03-11T15:34:54 IST" duration-ms="28370" status="PASS">
+        <test-method signature="checkAndUncheckEachCheckBoxAndValidateThatCheckBox()[pri:7, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:31 IST" name="checkAndUncheckEachCheckBoxAndValidateThatCheckBox" description=" Check and uncheck each hobby checkbox and Validate that the checkboxes are responding correctly to user interaction, allowing selection and deselection." finished-at="2024-03-11T16:28:00 IST" duration-ms="29235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkAndUncheckEachCheckBoxAndValidateThatCheckBox -->
-        <test-method signature="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect()[pri:8, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:54 IST" name="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect" description="Select each radio button option for gender and Validate that only one radio button option should be selectable at a time." finished-at="2024-03-11T15:34:59 IST" duration-ms="4721" status="PASS">
+        <test-method signature="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect()[pri:8, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:28:00 IST" name="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect" description="Select each radio button option for gender and Validate that only one radio button option should be selectable at a time." finished-at="2024-03-11T16:28:05 IST" duration-ms="4614" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect -->
-        <test-method signature="passwordValidationForDifferentScenarios()[pri:9, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:59 IST" name="passwordValidationForDifferentScenarios" description="passwordValidation_for_Different_Scenarios" finished-at="2024-03-11T15:35:04 IST" duration-ms="5699" status="PASS">
+        <test-method signature="passwordValidationForDifferentScenarios()[pri:9, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:28:05 IST" name="passwordValidationForDifferentScenarios" description="passwordValidation_for_Different_Scenarios" finished-at="2024-03-11T16:28:07 IST" duration-ms="2120" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passwordValidationForDifferentScenarios -->
-        <test-method signature="DateOfBirthValidation()[pri:10, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:35:04 IST" name="DateOfBirthValidation" description="Select different dates from the Date Of Birth fields_Validate that dates are selectable" finished-at="2024-03-11T15:36:29 IST" duration-ms="84361" status="PASS">
+        <test-method signature="DateOfBirthValidation()[pri:10, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:28:07 IST" name="DateOfBirthValidation" description="Select different dates from the Date Of Birth fields_Validate that dates are selectable" finished-at="2024-03-11T16:29:29 IST" duration-ms="82032" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DateOfBirthValidation -->
-        <test-method signature="fileUploadAction()[pri:11, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:36:29 IST" name="fileUploadAction" description="Click on the image upload button and Choose an image file from the file system _ Validate that the selected image should be displayed on the page after upload." finished-at="2024-03-11T15:36:40 IST" duration-ms="10787" status="PASS">
+        <test-method signature="fileUploadAction()[pri:11, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:29:29 IST" name="fileUploadAction" description="Click on the image upload button and Choose an image file from the file system _ Validate that the selected image should be displayed on the page after upload." finished-at="2024-03-11T16:29:39 IST" duration-ms="10684" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fileUploadAction -->
-        <test-method signature="filltheRegisterFormAndValidateErrorMessage()[pri:12, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:36:40 IST" name="filltheRegisterFormAndValidateErrorMessage" description="Fill the register form, leave any mandetory field (Phone No) and Verify that error messages for incomplete field displayed as appropriate." finished-at="2024-03-11T15:36:44 IST" duration-ms="4783" status="PASS">
+        <test-method signature="filltheRegisterFormAndValidateErrorMessage()[pri:12, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:29:39 IST" name="filltheRegisterFormAndValidateErrorMessage" description="Fill the register form, leave any mandetory field (Phone No) and Verify that error messages for incomplete field displayed as appropriate." finished-at="2024-03-11T16:29:42 IST" duration-ms="2951" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filltheRegisterFormAndValidateErrorMessage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:36:44 IST" name="tearDown" finished-at="2024-03-11T15:36:45 IST" duration-ms="458" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:29:42 IST" name="tearDown" finished-at="2024-03-11T16:29:43 IST" duration-ms="256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
