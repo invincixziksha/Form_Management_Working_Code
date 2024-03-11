@@ -10,8 +10,8 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
 
@@ -19,6 +19,7 @@ public class DemoRegisterPages extends StartupPage
 {
 	public SoftAssert softAssert;
 	//WebElemet Declaration
+	By pageTitleText = By.xpath("//title[contains(text() , 'Register')]"); 
 	By switchToNavigationMenu = By.xpath("//a[contains(text() , 'SwitchTo')]"); 
 	By Alerts = By.xpath("//a[contains(text() , 'Alerts')]"); 
 	By ButtonToDisplayAnAlertBox = By.xpath("//button[contains(text() , 'click the button to display an  alert box:')]"); 
@@ -60,6 +61,8 @@ public class DemoRegisterPages extends StartupPage
 	By uploadImageFileName = By.xpath("//input[@id='imagesrc']");
 	
 	
+	
+
 	//Getting the page name
 	String pageName = this.getClass().getSimpleName();
 	
@@ -79,28 +82,31 @@ public class DemoRegisterPages extends StartupPage
 	
 	
 	//Utilization
-	public DemoRegisterPages validateTitleOfHomePage() throws Exception {
-		try {
-			softAssert = new SoftAssert();
-			
-			driver.getTitle();
-			String titlePagePageName = driver.getTitle();
-			
-			String ExpectedErrorMessage = "Register" ; 
-			
-			softAssert.assertEquals(titlePagePageName, ExpectedErrorMessage, 
-			"entered text is not matching please check manually");	
-//			
-			System.out.println("Actual Title of the Current Page : " + titlePagePageName);
-			System.out.println("Expected Title of the Current Page : " + ExpectedErrorMessage);
-			System.out.println("User Successfully Navigate to the Register Page ");
-			
-			
-		}catch(Exception e) {
+	
+	public String getPageTitle() throws Exception
+	{
+		try 
+		{		
+			return commonEvents.getText(pageTitleText);
+		}
+		catch(Exception e) 
+		{
 			throw e;
 		}
-		return new DemoRegisterPages(driver);
 	}
+	
+	public String alertsPageTitle() throws Exception
+	{
+		try 
+		{		
+			return commonEvents.getText(Alerts);
+		}
+		catch(Exception e) 
+		{
+			throw e;
+		}
+	}
+
 	
 	public DemoRegisterPages clickOnswitchToNavigationMenu() throws Exception {
 		try {
@@ -129,29 +135,7 @@ public class DemoRegisterPages extends StartupPage
 		return new DemoRegisterPages(driver);
 	}
 	
-	public DemoRegisterPages validateTitleOfAlertsPage() throws Exception {
-		try {
-			softAssert = new SoftAssert();
-			
-			driver.getTitle();
-			String titlePagePageName = driver.getTitle();
-			
-			String ExpectedErrorMessage = "Alerts" ; 
-			
-			System.out.println("Actual Title of the Current Page : " + titlePagePageName);
-			System.out.println("Expected Title of the Current Page : " + ExpectedErrorMessage);
-			
-			softAssert.assertEquals(titlePagePageName, ExpectedErrorMessage, 
-			"entered text is not matching please check manually");	
-			
-			System.out.println("Control is navigated to new page (User Successfully Navigate to the Alerts Page) and Validate the Title of the Alerts Page ");
-			Thread.sleep(5000);	
-			
-		}catch(Exception e) {
-			throw e;
-		}
-		return new DemoRegisterPages(driver);
-	}
+
 	
 	public DemoRegisterPages clickOnButtonToDisplayAnAlertBox() throws Exception {
 		try {
@@ -162,33 +146,35 @@ public class DemoRegisterPages extends StartupPage
 		return new DemoRegisterPages(driver);
 	}
 	
-	public DemoRegisterPages handleAlertPopup() throws Exception {
-		try {
-			softAssert = new SoftAssert();
-			 Alert alert = driver.switchTo().alert();
-			 String actualAlertPopUpMessage =alert.getText();
-			 System.out.println("Actual Alert popup Message: " + actualAlertPopUpMessage );
-			 String ExpectedAlertMessage = "I am an alert box!";
-			 System.out.println("Expected Alert popup massege: " + ExpectedAlertMessage );
-			 softAssert.assertEquals(actualAlertPopUpMessage, ExpectedAlertMessage, 
-						"Popup Message is not matching, please check manually");	
-	         alert.accept(); // To accept the alert
-//				 alert.dismiss(); // To dismiss the alert
-	         System.out.println("alert popup is shown (Validated PopUp Message" );
-		}catch(Exception e) {
+	public String alertsMessageValidation() throws Exception
+	{
+		try 
+		{	
+			Alert alert = driver.switchTo().alert();
+	        String alertMessage = alert.getText();
+	        System.out.println("alert message is:" +alertMessage);
+	        Thread.sleep(3000);
+	        alert.accept();
+	        Assert.assertEquals(alertMessage, "I am an alert box!");
+			
+			
+		}
+		catch(Exception e) 
+		{
 			throw e;
 		}
-		return new DemoRegisterPages(driver);
-	}
+		return pageName;
+	}	
+	
 	
 	public DemoRegisterPages fillRegisterForm(Map<String, String> expectedData) throws Exception {
 		try {
 			Thread.sleep(5000);
 			commonEvents.sendKeys(firstNameTextbox,expectedData.get("firstName"));	
-			commonEvents.sendKeys(lastNameTextbox,expectedData.get("lastName"));
-			commonEvents.sendKeys(addressInputAreabox, "Trisulia-Cuttack, Odisha -754006");	
-			commonEvents.sendKeys(emailAddressTextbox, "nayaksurya50@gmail.com");	
-			commonEvents.sendKeys(phoneNumberTextbox, "9124564060");
+			commonEvents.sendKeys(lastNameTextbox,expectedData.get("lastName"));	
+			commonEvents.sendKeys(addressInputAreabox,expectedData.get("adds"));	
+			commonEvents.sendKeys(emailAddressTextbox,expectedData.get("emaiI"));	
+			commonEvents.sendKeys(phoneNumberTextbox,expectedData.get("phoneNo"));
 			commonEvents.click(maleRadioButton);
 			commonEvents.click(CricketCheckBox);
 			commonEvents.click(MoviesCheckBox);
@@ -202,9 +188,9 @@ public class DemoRegisterPages extends StartupPage
 		    commonEvents.click(selectCountryIndia);
 		    commonEvents.selectByValue(selectYear, "1996");
 		    commonEvents.selectByVisibleText(selectMonth, "June");
-		    commonEvents.selectByValue(selectDate, "25");    
-		    commonEvents.sendKeys(password, "Surya@123456");				
-			commonEvents.sendKeys(confirmPassword, "Surya@123456");			
+		    commonEvents.selectByValue(selectDate, "25");  
+		    commonEvents.sendKeys(password,expectedData.get("password"));
+		    commonEvents.sendKeys(confirmPassword,expectedData.get("confirmPassword"));		
 			commonEvents.click(submitButton);
 		}catch(Exception e) {
 			throw e;
@@ -212,13 +198,13 @@ public class DemoRegisterPages extends StartupPage
 		return new DemoRegisterPages(driver);
 	}
 	
-	public DemoRegisterPages fillAndValidateTheRegisterForm() throws Exception {
+	public DemoRegisterPages fillAndValidateTheRegisterForm(Map<String, String> expectedData) throws Exception {
 		try {
-			commonEvents.sendKeys(firstNameTextbox, "Surya");	
-			commonEvents.sendKeys(lastNameTextbox, "Prakash");	
-			commonEvents.sendKeys(addressInputAreabox, "Trisulia-Cuttack, Odisha -754006");	
-			commonEvents.sendKeys(emailAddressTextbox, "nayaksurya50@gmail.com");
-			commonEvents.sendKeys(phoneNumberTextbox, "9124564060");
+			commonEvents.sendKeys(firstNameTextbox,expectedData.get("firstName"));	
+			commonEvents.sendKeys(lastNameTextbox,expectedData.get("lastName"));	
+			commonEvents.sendKeys(addressInputAreabox,expectedData.get("adds"));	
+			commonEvents.sendKeys(emailAddressTextbox,expectedData.get("emaiI"));	
+			commonEvents.sendKeys(phoneNumberTextbox,expectedData.get("phoneNo"));
 			commonEvents.click(maleRadioButton);
 			commonEvents.click(CricketCheckBox);
 			commonEvents.click(MoviesCheckBox);
@@ -227,14 +213,14 @@ public class DemoRegisterPages extends StartupPage
 			commonEvents.click(selectEnglish);
 			commonEvents.click(selectHindi);
 			commonEvents.selectByVisibleText(skillsDropdown, "Java");
-			commonEvents.selectByVisibleText(countryDropdown, "Select Country");		    
+			commonEvents.selectByVisibleText(countryDropdown, "Select Country");
 		    commonEvents.click(clickOnCountryDropdown);
 		    commonEvents.click(selectCountryIndia);
 		    commonEvents.selectByValue(selectYear, "1996");
 		    commonEvents.selectByVisibleText(selectMonth, "June");
-		    commonEvents.selectByValue(selectDate, "25");
-		    commonEvents.sendKeys(password, "Surya@123456");
-			commonEvents.sendKeys(confirmPassword, "Surya@123456");	
+		    commonEvents.selectByValue(selectDate, "25");  
+		    commonEvents.sendKeys(password,expectedData.get("password"));
+		    commonEvents.sendKeys(confirmPassword,expectedData.get("confirmPassword"));
 			commonEvents.clear(phoneNumberTextbox);
 			commonEvents.click(submitButton);
 		}catch(Exception e) {
@@ -341,13 +327,14 @@ public class DemoRegisterPages extends StartupPage
 		try {
 			commonEvents.click(refreshButton);
 			
+			
 			WebElement clickOnCricketCheckBox = driver.findElement(By.xpath("//input[@value='Cricket']"));
 			WebElement clickOnMoviesCheckBox = driver.findElement(By.xpath("//input[@value='Movies']"));
 			WebElement clickOnHockeyCheckBox = driver.findElement(By.xpath("//input[@value='Hockey']"));
 			
 			//for check the each checkboxes
 			clickOnCricketCheckBox.click();
-			Thread.sleep(2000);
+
 			clickOnMoviesCheckBox.click();
 			Thread.sleep(2000);
 			clickOnHockeyCheckBox.click();
@@ -684,13 +671,6 @@ public class DemoRegisterPages extends StartupPage
 	
 	public String getUploadImageName() throws Exception {
 		try {
-//			softAssert = new SoftAssert();
-//			System.out.println("Uploaded Image Name : " + commonEvents.getText(uploadImageFileName));
-//			
-//			String ExpectedUploadedImageName = "invincixLogo.png";
-//			softAssert.assertEquals(commonEvents.getText(uploadImageFileName), ExpectedUploadedImageName, 
-//					"Selected Date is not matching please check manually");	
-			softAssert = new SoftAssert();
 			WebElement actualUploadedImageElement = driver.findElement(By.xpath("//input[@id='imagesrc']"));
 			String actualUploadedImageText = actualUploadedImageElement.getText();
 			System.out.println("Actual upload Image Name : " + actualUploadedImageText );
@@ -709,26 +689,15 @@ public class DemoRegisterPages extends StartupPage
 	
 	public DemoRegisterPages validateMandetoryField() throws Exception {
 		try {
-			// Create an instance of Actions class
-            //Actions actions = new Actions(driver);
-            
-         // Perform mouse hover action on the field
+	
             WebElement phoneNumberTextbox = driver.findElement(By.xpath("//input[@type='tel']"));
-            
-           // actions.moveToElement(phoneNumberTextbox).perform();
-            
-         // Locate the tooltip message element and capture the text
-//            WebElement elementWithTooltip = driver.findElement(By.className("tooltip"));
-//            String ErrorMessageText = tooltip.getText();
             String tooltipText = phoneNumberTextbox.getAttribute("title");
             System.out.println("Error message: " + tooltipText);
-            
             
 		}catch(Exception e) {
 			throw e;
 		}
 		return new DemoRegisterPages(driver);
 	}
-	
 
 }

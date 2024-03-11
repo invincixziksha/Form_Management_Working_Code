@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 05 16:32:19 IST 2024</td>
+<td>Started on:</td><td>Mon Mar 11 15:33:40 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14156 ms)</td>
+<tr><td>Total time:</td><td>185 seconds (185137 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>sanity </td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,78 +76,72 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.DemoAutomationRegister.clickOnRegisterLinkAndFillTheForms()'><b>clickOnRegisterLinkAndFillTheForms</b><br>Test class: testcases.DemoAutomationRegister<br>Test method: Click on Register menu option to navigate to Register page. and  Fill the form with data provided in excel sheet.</td>
-<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=122.0.6261.95)
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c18b54ce56f36e57c2ae6db5c86a6e61, findElement {using=xpath, value=//input[@placeholder=&apos;First Name&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\ABHISE~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51947}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51947/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c18b54ce56f36e57c2ae6db5c86a6e61
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at coreUtilities.utils.CommonEvents.getWebElement(CommonEvents.java:88)
-	at coreUtilities.utils.CommonEvents.sendKeys(CommonEvents.java:1395)
-	at pages.DemoRegisterPages.fillRegisterForm(DemoRegisterPages.java:187)
-	at testcases.DemoAutomationRegister.clickOnRegisterLinkAndFillTheForms(DemoAutomationRegister.java:88)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1623)
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace570098642", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace570098642'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=122.0.6261.95)
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c18b54ce56f36e57c2ae6db5c86a6e61, findElement {using=xpath, value=//input[@placeholder=&apos;First Name&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\ABHISE~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51947}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51947/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c18b54ce56f36e57c2ae6db5c86a6e61
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at coreUtilities.utils.CommonEvents.getWebElement(CommonEvents.java:88)
-	at coreUtilities.utils.CommonEvents.sendKeys(CommonEvents.java:1395)
-	at pages.DemoRegisterPages.fillRegisterForm(DemoRegisterPages.java:187)
-	at testcases.DemoAutomationRegister.clickOnRegisterLinkAndFillTheForms(DemoAutomationRegister.java:88)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1623)
-</pre></div></td>
+<td title='testcases.DemoAutomationRegister.clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown()'><b>clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown</b><br>Test class: testcases.DemoAutomationRegister<br>Test method: Click on the country dropdown and Validate if each country option is selectable from the dropdown.<br/>
+<a href="#Output-418472594" onClick='toggleBox("Output-418472594", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-418472594" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-418472594">
+Selected country Validated<br/>
+</div>
+</td>
+<td></td>
 <td>5</td>
-<td>testcases.DemoAutomationRegister@68d279ec</td></tr>
+<td>testcases.DemoAutomationRegister@60975100</td></tr>
+<tr>
+<td title='testcases.DemoAutomationRegister.clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne()'><b>clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne</b><br>Test class: testcases.DemoAutomationRegister<br>Test method: Click on the country dropdown and Select each country option one by one.</td>
+<td></td>
+<td>6</td>
+<td>testcases.DemoAutomationRegister@60975100</td></tr>
+<tr>
+<td title='testcases.DemoAutomationRegister.selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect()'><b>selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect</b><br>Test class: testcases.DemoAutomationRegister<br>Test method: Select each radio button option for gender and Validate that only one radio button option should be selectable at a time.</td>
+<td></td>
+<td>4</td>
+<td>testcases.DemoAutomationRegister@60975100</td></tr>
+<tr>
+<td title='testcases.DemoAutomationRegister.DemoRegisterAutomation()'><b>DemoRegisterAutomation</b><br>Test class: testcases.DemoAutomationRegister<br>Test method: Navigate to the URL and Validate the Home Page</td>
+<td></td>
+<td>0</td>
+<td>testcases.DemoAutomationRegister@60975100</td></tr>
+<tr>
+<td title='testcases.DemoAutomationRegister.DateOfBirthValidation()'><b>DateOfBirthValidation</b><br>Test class: testcases.DemoAutomationRegister<br>Test method: Select different dates from the Date Of Birth fields_Validate that dates are selectable</td>
+<td></td>
+<td>84</td>
+<td>testcases.DemoAutomationRegister@60975100</td></tr>
+<tr>
+<td title='testcases.DemoAutomationRegister.handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup()'><b>handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup</b><br>Test class: testcases.DemoAutomationRegister<br>Test method: Click on button to display the alert box and Validate if alert popup is shown.</td>
+<td></td>
+<td>3</td>
+<td>testcases.DemoAutomationRegister@60975100</td></tr>
+<tr>
+<td title='testcases.DemoAutomationRegister.filltheRegisterFormAndValidateErrorMessage()'><b>filltheRegisterFormAndValidateErrorMessage</b><br>Test class: testcases.DemoAutomationRegister<br>Test method: Fill the register form, leave any mandetory field (Phone No) and Verify that error messages for incomplete field displayed as appropriate.</td>
+<td></td>
+<td>4</td>
+<td>testcases.DemoAutomationRegister@60975100</td></tr>
+<tr>
+<td title='testcases.DemoAutomationRegister.fileUploadAction()'><b>fileUploadAction</b><br>Test class: testcases.DemoAutomationRegister<br>Test method: Click on the image upload button and Choose an image file from the file system _ Validate that the selected image should be displayed on the page after upload.</td>
+<td></td>
+<td>10</td>
+<td>testcases.DemoAutomationRegister@60975100</td></tr>
+<tr>
+<td title='testcases.DemoAutomationRegister.clickOnRegisterLinkAndFillTheForms()'><b>clickOnRegisterLinkAndFillTheForms</b><br>Test class: testcases.DemoAutomationRegister<br>Test method: Click on Register menu option to navigate to Register page. and  Fill the form with data provided in excel sheet.</td>
+<td></td>
+<td>10</td>
+<td>testcases.DemoAutomationRegister@60975100</td></tr>
+<tr>
+<td title='testcases.DemoAutomationRegister.passwordValidationForDifferentScenarios()'><b>passwordValidationForDifferentScenarios</b><br>Test class: testcases.DemoAutomationRegister<br>Test method: passwordValidation_for_Different_Scenarios</td>
+<td></td>
+<td>5</td>
+<td>testcases.DemoAutomationRegister@60975100</td></tr>
+<tr>
+<td title='testcases.DemoAutomationRegister.checkAndUncheckEachCheckBoxAndValidateThatCheckBox()'><b>checkAndUncheckEachCheckBoxAndValidateThatCheckBox</b><br>Test class: testcases.DemoAutomationRegister<br>Test method:  Check and uncheck each hobby checkbox and Validate that the checkboxes are responding correctly to user interaction, allowing selection and deselection.</td>
+<td></td>
+<td>28</td>
+<td>testcases.DemoAutomationRegister@60975100</td></tr>
+<tr>
+<td title='testcases.DemoAutomationRegister.clickOnSwitchToAlertAndValidateTitlePage()'><b>clickOnSwitchToAlertAndValidateTitlePage</b><br>Test class: testcases.DemoAutomationRegister<br>Test method: Click SwitchTo à Alert Link. and Validate if control is navigated to new page</td>
+<td></td>
+<td>3</td>
+<td>testcases.DemoAutomationRegister@60975100</td></tr>
 </table><p>
 </body>
 </html>

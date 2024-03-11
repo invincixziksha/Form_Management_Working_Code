@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Selected country Validated]]>
+    </line>
   </reporter-output>
-  <suite started-at="2024-03-05T16:32:19 IST" name="Suite" finished-at="2024-03-05T16:32:33 IST" duration-ms="14156">
+  <suite started-at="2024-03-11T15:33:40 IST" name="Suite" finished-at="2024-03-11T15:36:45 IST" duration-ms="185137">
     <groups>
       <group name="sanity">
-        <method signature="DemoAutomationRegister.clickOnRegisterLinkAndFillTheForms()[pri:4, instance:testcases.DemoAutomationRegister@68d279ec]" name="clickOnRegisterLinkAndFillTheForms" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegister.DemoRegisterAutomation()[pri:1, instance:testcases.DemoAutomationRegister@60975100]" name="DemoRegisterAutomation" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegister.clickOnSwitchToAlertAndValidateTitlePage()[pri:2, instance:testcases.DemoAutomationRegister@60975100]" name="clickOnSwitchToAlertAndValidateTitlePage" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegister.handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup()[pri:3, instance:testcases.DemoAutomationRegister@60975100]" name="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegister.clickOnRegisterLinkAndFillTheForms()[pri:4, instance:testcases.DemoAutomationRegister@60975100]" name="clickOnRegisterLinkAndFillTheForms" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegister.clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne()[pri:5, instance:testcases.DemoAutomationRegister@60975100]" name="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegister.clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown()[pri:6, instance:testcases.DemoAutomationRegister@60975100]" name="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegister.checkAndUncheckEachCheckBoxAndValidateThatCheckBox()[pri:7, instance:testcases.DemoAutomationRegister@60975100]" name="checkAndUncheckEachCheckBoxAndValidateThatCheckBox" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegister.selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect()[pri:8, instance:testcases.DemoAutomationRegister@60975100]" name="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegister.passwordValidationForDifferentScenarios()[pri:9, instance:testcases.DemoAutomationRegister@60975100]" name="passwordValidationForDifferentScenarios" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegister.DateOfBirthValidation()[pri:10, instance:testcases.DemoAutomationRegister@60975100]" name="DateOfBirthValidation" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegister.fileUploadAction()[pri:11, instance:testcases.DemoAutomationRegister@60975100]" name="fileUploadAction" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegister.filltheRegisterFormAndValidateErrorMessage()[pri:12, instance:testcases.DemoAutomationRegister@60975100]" name="filltheRegisterFormAndValidateErrorMessage" class="testcases.DemoAutomationRegister"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2024-03-05T16:32:19 IST" name="Test" finished-at="2024-03-05T16:32:33 IST" duration-ms="14156">
+    <test started-at="2024-03-11T15:33:40 IST" name="Test" finished-at="2024-03-11T15:36:45 IST" duration-ms="185137">
       <class name="testcases.DemoAutomationRegister">
-        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.DemoAutomationRegister@68d279ec]" started-at="2024-03-05T16:32:19 IST" name="initBrowser" finished-at="2024-03-05T16:32:27 IST" duration-ms="8809" status="PASS">
+        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:33:40 IST" name="initBrowser" finished-at="2024-03-11T15:33:56 IST" duration-ms="16065" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,67 +40,58 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method signature="clickOnRegisterLinkAndFillTheForms()[pri:4, instance:testcases.DemoAutomationRegister@68d279ec]" started-at="2024-03-05T16:32:27 IST" name="clickOnRegisterLinkAndFillTheForms" description="Click on Register menu option to navigate to Register page. and  Fill the form with data provided in excel sheet." finished-at="2024-03-05T16:32:32 IST" duration-ms="5095" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=122.0.6261.95)
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c18b54ce56f36e57c2ae6db5c86a6e61, findElement {using=xpath, value=//input[@placeholder='First Name']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\ABHISE~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51947}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51947/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c18b54ce56f36e57c2ae6db5c86a6e61]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=122.0.6261.95)
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c18b54ce56f36e57c2ae6db5c86a6e61, findElement {using=xpath, value=//input[@placeholder='First Name']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\ABHISE~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51947}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51947/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c18b54ce56f36e57c2ae6db5c86a6e61
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at coreUtilities.utils.CommonEvents.getWebElement(CommonEvents.java:88)
-at coreUtilities.utils.CommonEvents.sendKeys(CommonEvents.java:1395)
-at pages.DemoRegisterPages.fillRegisterForm(DemoRegisterPages.java:187)
-at testcases.DemoAutomationRegister.clickOnRegisterLinkAndFillTheForms(DemoAutomationRegister.java:88)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1623)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+        <test-method signature="DemoRegisterAutomation()[pri:1, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:33:56 IST" name="DemoRegisterAutomation" description="Navigate to the URL and Validate the Home Page" finished-at="2024-03-11T15:33:56 IST" duration-ms="233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DemoRegisterAutomation -->
+        <test-method signature="clickOnSwitchToAlertAndValidateTitlePage()[pri:2, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:33:56 IST" name="clickOnSwitchToAlertAndValidateTitlePage" description="Click SwitchTo à Alert Link. and Validate if control is navigated to new page" finished-at="2024-03-11T15:34:00 IST" duration-ms="3761" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnSwitchToAlertAndValidateTitlePage -->
+        <test-method signature="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup()[pri:3, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:00 IST" name="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup" description="Click on button to display the alert box and Validate if alert popup is shown." finished-at="2024-03-11T15:34:03 IST" duration-ms="3153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup -->
+        <test-method signature="clickOnRegisterLinkAndFillTheForms()[pri:4, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:03 IST" name="clickOnRegisterLinkAndFillTheForms" description="Click on Register menu option to navigate to Register page. and  Fill the form with data provided in excel sheet." finished-at="2024-03-11T15:34:13 IST" duration-ms="10291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnRegisterLinkAndFillTheForms -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DemoAutomationRegister@68d279ec]" started-at="2024-03-05T16:32:32 IST" name="tearDown" finished-at="2024-03-05T16:32:33 IST" duration-ms="161" status="PASS">
+        <test-method signature="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne()[pri:5, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:13 IST" name="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne" description="Click on the country dropdown and Select each country option one by one." finished-at="2024-03-11T15:34:20 IST" duration-ms="6976" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne -->
+        <test-method signature="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown()[pri:6, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:20 IST" name="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown" description="Click on the country dropdown and Validate if each country option is selectable from the dropdown." finished-at="2024-03-11T15:34:26 IST" duration-ms="5316" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Selected country Validated]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown -->
+        <test-method signature="checkAndUncheckEachCheckBoxAndValidateThatCheckBox()[pri:7, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:26 IST" name="checkAndUncheckEachCheckBoxAndValidateThatCheckBox" description=" Check and uncheck each hobby checkbox and Validate that the checkboxes are responding correctly to user interaction, allowing selection and deselection." finished-at="2024-03-11T15:34:54 IST" duration-ms="28370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAndUncheckEachCheckBoxAndValidateThatCheckBox -->
+        <test-method signature="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect()[pri:8, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:54 IST" name="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect" description="Select each radio button option for gender and Validate that only one radio button option should be selectable at a time." finished-at="2024-03-11T15:34:59 IST" duration-ms="4721" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect -->
+        <test-method signature="passwordValidationForDifferentScenarios()[pri:9, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:34:59 IST" name="passwordValidationForDifferentScenarios" description="passwordValidation_for_Different_Scenarios" finished-at="2024-03-11T15:35:04 IST" duration-ms="5699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- passwordValidationForDifferentScenarios -->
+        <test-method signature="DateOfBirthValidation()[pri:10, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:35:04 IST" name="DateOfBirthValidation" description="Select different dates from the Date Of Birth fields_Validate that dates are selectable" finished-at="2024-03-11T15:36:29 IST" duration-ms="84361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DateOfBirthValidation -->
+        <test-method signature="fileUploadAction()[pri:11, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:36:29 IST" name="fileUploadAction" description="Click on the image upload button and Choose an image file from the file system _ Validate that the selected image should be displayed on the page after upload." finished-at="2024-03-11T15:36:40 IST" duration-ms="10787" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fileUploadAction -->
+        <test-method signature="filltheRegisterFormAndValidateErrorMessage()[pri:12, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:36:40 IST" name="filltheRegisterFormAndValidateErrorMessage" description="Fill the register form, leave any mandetory field (Phone No) and Verify that error messages for incomplete field displayed as appropriate." finished-at="2024-03-11T15:36:44 IST" duration-ms="4783" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filltheRegisterFormAndValidateErrorMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T15:36:44 IST" name="tearDown" finished-at="2024-03-11T15:36:45 IST" duration-ms="458" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
