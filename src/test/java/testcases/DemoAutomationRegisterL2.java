@@ -80,7 +80,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 		softAssert.assertEquals("todo", RegisterPageInstance.goToSwitchToFrameClickOnClickOniframeWithAnIframeAndPassTheValueInTextbox());
 	}	
 	
-	@Test(priority = 6, groups = {"sanity"}, description="Go to SwitchTo Tab clickOn Frame, then clickOn iframeWithANIframe and then pass the value in textbox")
+	@Test(priority = 6, groups = {"sanity"}, description="Go to Widget Tab clickOn Accordio and Select Any Groups And Fetch the Data")
 	public void goToWidgetsTabclickOnAccordioSelectAnyGroupsAndFetchData() throws Exception {
 		softAssert = new SoftAssert();		
 		RegisterPageInstance = new DemoRegisterL2(driver);
@@ -88,7 +88,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 		softAssert.assertEquals("todo", RegisterPageInstance.goToWidgetsTabclickOnAccordioSelectAnyGroupsAndFetchData());
 	}	
 	
-	@Test(priority = 7, groups = {"sanity"}, description="Go to SwitchTo Tab clickOn Frame, then clickOn iframeWithANIframe and then pass the value in textbox")
+	@Test(priority = 7, groups = {"sanity"}, description="Go to Widget Tab clickOn Auto complete and pass the value")
 	public void goToWidgetsTabclickOnAUtoCompleteAndPassValue() throws Exception {
 		softAssert = new SoftAssert();		
 		RegisterPageInstance = new DemoRegisterL2(driver);
@@ -96,7 +96,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 		softAssert.assertEquals("todo", RegisterPageInstance.goToWidgetsTabclickOnAUtoCompleteAndPassValue());
 	}
 	
-	@Test(priority = 8, groups = {"sanity"}, description="Go to SwitchTo Tab clickOn Frame, then clickOn iframeWithANIframe and then pass the value in textbox")
+	@Test(priority = 8, groups = {"sanity"}, description="Go to Widget Tab clickOn slider and perform Maximize and Minimize action")
 	public void goToWidgetsTabclickOnSliderAndPerformMaximizeMinimize() throws Exception {
 		softAssert = new SoftAssert();		
 		RegisterPageInstance = new DemoRegisterL2(driver);
@@ -104,7 +104,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 		softAssert.assertEquals("todo", RegisterPageInstance.goToWidgetsTabclickOnSliderAndPerformMaximizeMinimize());
 	}	
 	
-	@Test(priority = 9, groups = {"sanity"}, description="Go to SwitchTo Tab clickOn Frame, then clickOn iframeWithANIframe and then pass the value in textbox")
+	@Test(priority = 9, groups = {"sanity"}, description="Go to Interaction Tab clickOn Drag and drop then click on static and perform DragAndDrop Action ")
 	public void goToInterActionTabclickOnDragAndDropClickOnStaticAndPerfomDragAndDropAction() throws Exception {
 		softAssert = new SoftAssert();		
 		RegisterPageInstance = new DemoRegisterL2(driver);
@@ -112,7 +112,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 		softAssert.assertEquals("todo", RegisterPageInstance.goToInterActionTabclickOnDragAndDropClickOnStaticAndPerfomDragAndDropAction());
 	}	
 	
-	@Test(priority = 10, groups = {"sanity"}, description="Go to SwitchTo Tab clickOn Frame, then clickOn iframeWithANIframe and then pass the value in textbox")
+	@Test(priority = 10, groups = {"sanity"}, description="Go to Interaction Tab clickOn Drag and drop then click on dynamic and perform DragAndDrop Action")
 	public void goToInterActionTabclickOnDragAndDropClickOnDynamicAndPerfomDragAndDropAction() throws Exception {
 		softAssert = new SoftAssert();		
 		RegisterPageInstance = new DemoRegisterL2(driver);
