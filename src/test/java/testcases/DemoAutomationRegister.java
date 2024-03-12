@@ -17,6 +17,7 @@ import coreUtilities.utils.FileOperations;
 import pages.DemoRegisterPages;
 import pages.StartupPage;
 import testBase.AppTestBase;
+import testdata.LocatorsFactory;
 
 public class DemoAutomationRegister extends AppTestBase {
 	
@@ -27,7 +28,7 @@ public class DemoAutomationRegister extends AppTestBase {
 	DemoRegisterPages RegisterPageInstance;
 	String numberToBeEntered="nayaksurya50@gmail.com";
 	String ExpectedErrorMessage="The phone number you're trying to verify was recently used to verify a different account.  Please try a different number.";
-	
+	LocatorsFactory LocatorsFactoryInstance=new LocatorsFactory(driver);
 	
 	@Parameters({"browser", "environment"})
 	@BeforeClass(alwaysRun = true)
@@ -44,141 +45,96 @@ public class DemoAutomationRegister extends AppTestBase {
 	
 	@Test(priority = 1, groups = {"sanity"}, description="Navigate to the URL and Validate the Home Page")
 	public void DemoRegisterAutomation() throws Exception {
-		
-		softAssert = new SoftAssert();
 		RegisterPageInstance = new DemoRegisterPages(driver);
-		
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "HomePage_Title");
-		softAssert.assertEquals(RegisterPageInstance.getPageTitle(), expectedData.get("pageTitle"), 
-				"page title is not matching please check manually");
+		Assert.assertEquals(RegisterPageInstance.validateTitleOfHomePage(), expectedData.get("pageTitle"));
+		Assert.assertTrue(LocatorsFactoryInstance.getswitchToNavigationMenu(driver).isDisplayed(), "switch to menu is not present in the current page, Please check manually");
+
 	}	
 	
-	@Test(priority = 2, groups = {"sanity"}, description="Click SwitchTo à Alert Link. and Validate if control is navigated to new page")
+	@Test(priority = 2, groups = {"sanity"}, description="Click SwitchTo  Alert Link. and Validate if control is navigated to new page")
 	public void clickOnSwitchToAlertAndValidateTitlePage() throws Exception {
 		
 		softAssert = new SoftAssert();
 		RegisterPageInstance = new DemoRegisterPages(driver);
-		RegisterPageInstance.clickOnswitchToNavigationMenu();
-		RegisterPageInstance.clickOnAlerts();
-		
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "alerts_Page");
-		softAssert.assertEquals(RegisterPageInstance.alertsPageTitle(), expectedData.get("alertsTitle"), 
-				"page title is not matching please check manually");
+		Assert.assertEquals(RegisterPageInstance.clickOnSwitchToAlertandValidateTitlePage(), expectedData.get("alertsTitle"));
+		Assert.assertTrue(LocatorsFactoryInstance.getswitchToNavigationMenu(driver).isDisplayed(), "switch to menu is not present in the current page, Please check manually");	
 	}	
 	
 	@Test(priority = 3, groups = {"sanity"}, description="Click on button to display the alert box and Validate if alert popup is shown.")
 	public void handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup() throws Exception {
 		RegisterPageInstance = new DemoRegisterPages(driver);
-		RegisterPageInstance.clickOnButtonToDisplayAnAlertBox();
-		RegisterPageInstance.alertsMessageValidation();
-//		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "alerts_message");
-//		softAssert.assertEquals(RegisterPageInstance.alertsMessageValidation(), expectedData.get("alertsMessage"), 
-//				"page title is not matching please check manually");
+		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "alerts_message");
+		Assert.assertEquals(RegisterPageInstance.handleAlertsPopupandValidateTheTextInsideAnAlertsPopup(), expectedData.get("alertsMessage"));
+		Assert.assertTrue(LocatorsFactoryInstance.getAlertWithOkButton(driver).isDisplayed(), "switch to menu is not present in the current page, Please check manually");	
+		
 	}	
-	
 	@Test(priority = 4, groups = {"sanity"}, description="Click on Register menu option to navigate to Register page. and  Fill the form with data provided in excel sheet.")
 	public void clickOnRegisterLinkAndFillTheForms() throws Exception {
-	
-		softAssert = new SoftAssert();
+
 		RegisterPageInstance = new DemoRegisterPages(driver);
-		
-		RegisterPageInstance.clickOnRegisterNavigationMenu();
-		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "HomePage_Title");
-		softAssert.assertEquals(RegisterPageInstance.getPageTitle(), expectedData.get("pageTitle"), 
-				"page title is not matching please check manually");
 		String expectedDataFilePath = testDataFilePath+"expected_data.json";
-		Map<String, String> expectedRegisterDetails = new FileOperations().readJson(expectedDataFilePath, "userdetails");
-		RegisterPageInstance.fillRegisterForm(expectedRegisterDetails);
+		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "userdetails");
+		Assert.assertTrue(RegisterPageInstance.clickOnRegisterLinkandFillTheForms(expectedData), "Register button is not present, please check manually");
+		Assert.assertTrue(LocatorsFactoryInstance.firstNameTextboxIsPresent(driver).isDisplayed(), "First name text field is not present in the current page, Please check manually");
+		
 	}		
 	
 	@Test(priority = 5, groups = {"sanity"}, description="Click on the country dropdown and Select each country option one by one.")
 	public void clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne() throws Exception {
-		
-		softAssert = new SoftAssert();
 		RegisterPageInstance = new DemoRegisterPages(driver);
-		RegisterPageInstance.clickOnSelectCountryDropdownAndSelectEachCountryOneByOne();
+		Assert.assertTrue(RegisterPageInstance.clickOnSelectCountryDropdownAndSelectEachCountryOneByOne(), "Register button is not present, please check manually");	
+		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
+
 	}	
 	
 	@Test(priority = 6, groups = {"sanity"}, description="Click on the country dropdown and Validate if each country option is selectable from the dropdown.")
 	public void clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown() throws Exception {
-		
-		softAssert = new SoftAssert();
 		RegisterPageInstance = new DemoRegisterPages(driver);
-		RegisterPageInstance.selectEachCountryOneByOneFromCountryDrpdownAndValidate();
+		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "userdetails");
+		Assert.assertEquals(RegisterPageInstance.selectAustraliaInCountryDrpdownAndValidate(), expectedData.get("CountryName"));
+		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown is not present in the current page, Please check manually");
 	}	
 	
 	@Test(priority = 7, groups = {"sanity"}, description=" Check and uncheck each hobby checkbox and Validate that the checkboxes are responding correctly to user interaction, allowing selection and deselection.")
 	public void checkAndUncheckEachCheckBoxAndValidateThatCheckBox() throws Exception {
-		
-		softAssert = new SoftAssert();
 		RegisterPageInstance = new DemoRegisterPages(driver);
-		RegisterPageInstance.checkAndUncheckEachHobbyCheckBox();
-		RegisterPageInstance.validateCheckBoxesRespondingCorrectllyToUserInterAction_AllowingSelectionAndDeselection();
+		Assert.assertTrue(RegisterPageInstance.checkandUncheckEachCheckBoxAndValidateThatCheckBox(), "Hobbies check box is not present, please check manually");	
+		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
+
 	}	
 	
 	@Test(priority = 8, groups = {"sanity"}, description="Select each radio button option for gender and Validate that only one radio button option should be selectable at a time.")
 	public void selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect() throws Exception {
-		
-		softAssert = new SoftAssert();
 		RegisterPageInstance = new DemoRegisterPages(driver);
-		RegisterPageInstance.selectEachRadioButton();
-		RegisterPageInstance.validateEachRadioButtonoptionShouldBeSelectableAttime();
-	}	
-	
-	@Test(priority = 9, groups = {"sanity"}, description="passwordValidation_for_Different_Scenarios")
-	public void passwordValidationForDifferentScenarios() throws Exception {
-		
-		softAssert = new SoftAssert();
-		RegisterPageInstance = new DemoRegisterPages(driver);
+		Assert.assertTrue(RegisterPageInstance.selecteachRadioButtonvalidateEachRadioButtonoptionShouldBeSelectableAttime(), "Radio buttons are  not present, please check manually");	
+		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
 
-		// Scenario 1: Matching passwords
-		String matchingPassword = "Password123";
-		RegisterPageInstance.validatePasswordFieldForScenarioOneBySendingDifferentValues( matchingPassword);
-		softAssert.assertEquals(RegisterPageInstance.validatePasswordFieldForScenarioOneBySendingDifferentValues( matchingPassword), matchingPassword, 
-				"Matching passwords is not matching please check manually");		
-
-		// Scenario 2: Non-matching passwords
-		String nonMatchingPassword1 = "Password123";
-        String nonMatchingPassword2 = "Password456";
-		RegisterPageInstance.validatePasswordFieldForScenarioTwoBySendingDifferentValues( nonMatchingPassword1, nonMatchingPassword2 );		
-		softAssert.assertEquals(RegisterPageInstance.validatePasswordFieldForScenarioTwoBySendingDifferentValues( nonMatchingPassword1, nonMatchingPassword2), matchingPassword, 
-						"Non-matching passwords is not matching please check manually");		
-
-		// Scenario 3: Password pattern validation
-		String invalidPassword = "pass"; // Password doesn't meet the minimum length requirement
-		RegisterPageInstance.validatePasswordFieldForScenarioThreeBySendingDifferentValues( invalidPassword );
-						
-	    softAssert.assertEquals(RegisterPageInstance.validatePasswordFieldForScenarioThreeBySendingDifferentValues( invalidPassword), invalidPassword, 
-								"Password pattern validation is not matching please check manually");
 	}	
 	
-	@Test(priority = 10, groups = {"sanity"}, description="Select different dates from the Date Of Birth fields_Validate that dates are selectable")
-	public void DateOfBirthValidation() throws Exception {
-		
-		softAssert = new SoftAssert();
+	@Test(priority = 9, groups = {"sanity"}, description="Select different dates from the Date Of Birth fields")
+	public void selectMonthYearDateInDropdown() throws Exception {
 		RegisterPageInstance = new DemoRegisterPages(driver);
-		RegisterPageInstance.selectYearMonthDate();	
-		RegisterPageInstance.validateAccurateSelectableYearMonthDate();
+		Assert.assertTrue(RegisterPageInstance.selectYearMonthDate(), "date,month and year dropdowns are  not present, please check manually");	
+		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
 	}	
 	
-	@Test(priority = 11, groups = {"sanity"}, description="Click on the image upload button and Choose an image file from the file system _ Validate that the selected image should be displayed on the page after upload.")
-	public void fileUploadAction() throws Exception {
-		
-		softAssert = new SoftAssert();
+	@Test(priority = 10, groups = {"sanity"}, description="Click on the image upload button and Choose an image file from the file system")
+	public void uploadAImage() throws Exception {
 		RegisterPageInstance = new DemoRegisterPages(driver);
-		RegisterPageInstance.clickOnChooseFilUploadButton();
-//		RegisterPageInstance.getUploadImageName();
+		Assert.assertTrue(RegisterPageInstance.clickOnChooseFilUploadButtonAndUploadImage(null), "file upload failed, please check manually");	
+		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
 	}	
+
 	
-	@Test(priority = 12, groups = {"sanity"}, description="Fill the register form, leave any mandetory field (Phone No) and Verify that error messages for incomplete field displayed as appropriate.")
-	public void filltheRegisterFormAndValidateErrorMessage() throws Exception {
-		
-		softAssert = new SoftAssert();
+	@Test(priority = 11, groups = {"sanity"}, description="click On Register And Fill FirstNameTextbox lastNameTextbox addressInputAreabox emailAddress Textbox And submitButton")
+	public void clickOnRegisterAndFillFirstNameTextboxlastnameTextboxaddressInputAreaboxemailAddressTextboxAndsubmitButton() throws Exception {
 		RegisterPageInstance = new DemoRegisterPages(driver);
 		String expectedDataFilePath = testDataFilePath+"expected_data.json";
-		Map<String, String> expectedRegisterDetails = new FileOperations().readJson(expectedDataFilePath, "userdetails");
-		RegisterPageInstance.fillAndValidateTheRegisterForm(expectedRegisterDetails);
-		RegisterPageInstance.validateMandetoryField();
+		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "userdetails");
+		Assert.assertTrue(RegisterPageInstance.clickOnRegisterAndFillFirstNameTextboxlastNameTextboxaddressInputAreaboxemailAddressTextboxAndsubmitButton(expectedData), "Register button is not present, please check manually");
+		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
 	}	
 	
 

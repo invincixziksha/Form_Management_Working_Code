@@ -17,8 +17,8 @@
       <class name="testcases.DemoAutomationRegister">
         <methods>
           <include name="tearDown"/>
+          <include name="filltheRegisterFormAndValidateErrorMessage"/>
           <include name="initBrowser"/>
-          <include name="clickOnRegisterLinkAndFillTheForms"/>
         </methods>
       </class> <!-- testcases.DemoAutomationRegister -->
     </classes>

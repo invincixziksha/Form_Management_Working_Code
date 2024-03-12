@@ -71,168 +71,120 @@ public class DemoRegisterPages extends StartupPage
 	public DemoRegisterPages(WebDriver driver) 
 	{
 		super(driver);
-//		commonEvents.waitTillElementLocated(switchToNavigationMenu, 120)
-//		.waitTillElementVisible(switchToNavigationMenu, 30);
-		
-//		commonEvents.waitTillElementLocated(Alerts, 120)
-//		.waitTillElementVisible(Alerts, 30);
+
 
 	}	
-	
-	
-	
-	//Utilization
-	
-	public String getPageTitle() throws Exception
-	{
-		try 
-		{		
-			return commonEvents.getText(pageTitleText);
-		}
-		catch(Exception e) 
-		{
+	/**@Test1
+	 * about this method validateTitleOfHomePage() 
+	 * @param : null
+	 * @description : get the title of the home page and validate
+	 * @return : String
+	 * @author : Yaksha
+	 */
+	public String validateTitleOfHomePage() throws Exception {
+		try {
+			String titleOfTheHomePage = driver.getTitle();
+			System.out.println("Title of the HomePage:"+titleOfTheHomePage);
+			return titleOfTheHomePage;
+		}catch(Exception e) {
 			throw e;
 		}
+		
 	}
-	
-	public String alertsPageTitle() throws Exception
-	{
-		try 
-		{		
-			return commonEvents.getText(Alerts);
-		}
-		catch(Exception e) 
-		{
-			throw e;
-		}
-	}
-
-	
-	public DemoRegisterPages clickOnswitchToNavigationMenu() throws Exception {
+	/**@Test2
+	 * about this method clickOnSwitchToAlertandValidateTitlePage() 
+	 * @param : null
+	 * @description : click on the switch to alert and validate the title of this page
+	 * @return : String
+	 * @author : Yaksha
+	 */
+	public String  clickOnSwitchToAlertandValidateTitlePage() throws Exception {
 		try {
 			 commonEvents.click(switchToNavigationMenu);
-		}catch(Exception e) {
-			throw e;
-		}
-		return new DemoRegisterPages(driver);
-	}
-	
-	public DemoRegisterPages clickOnRegisterNavigationMenu() throws Exception {
-		try {
-			 commonEvents.click(RegisterNavigationMenu);
-		}catch(Exception e) {
-			throw e;
-		}
-		return new DemoRegisterPages(driver);
-	}
-	
-	public DemoRegisterPages clickOnAlerts() throws Exception {
-		try {
 			 commonEvents.click(Alerts);
+			 driver.getTitle();
+			 String titleOfThePage = driver.getTitle();
+			 System.out.println("Title of the alert page:"+titleOfThePage);
+			 return titleOfThePage;
 		}catch(Exception e) {
 			throw e;
 		}
-		return new DemoRegisterPages(driver);
 	}
 	
-
+	/**@Test3
+	 * about this method handleAlertsPopupandValidateTheTextInsideAnAlertsPopup() 
+	 * @param : null
+	 * @description : click on the ButtonToDisplayAnAlertBox then control switch in to alert popup and get the alert message and validate
+	 * @return : String
+	 * @author : Yaksha
+	 */
 	
-	public DemoRegisterPages clickOnButtonToDisplayAnAlertBox() throws Exception {
+	public String handleAlertsPopupandValidateTheTextInsideAnAlertsPopup() throws Exception {
 		try {
 			 commonEvents.click(ButtonToDisplayAnAlertBox);
+			 Alert alert = driver.switchTo().alert();
+			 Thread.sleep(5000);
+			 String alertPopUpMessage =alert.getText();
+			 System.out.println("Alert popup Message: " + alertPopUpMessage );
+			 driver.switchTo().alert().accept();
+			 return alertPopUpMessage;
 		}catch(Exception e) {
 			throw e;
 		}
-		return new DemoRegisterPages(driver);
 	}
 	
-	public String alertsMessageValidation() throws Exception
-	{
-		try 
-		{	
-			Alert alert = driver.switchTo().alert();
-	        String alertMessage = alert.getText();
-	        System.out.println("alert message is:" +alertMessage);
-	        Thread.sleep(3000);
-	        alert.accept();
-	        Assert.assertEquals(alertMessage, "I am an alert box!");
-			
-			
-		}
-		catch(Exception e) 
-		{
-			throw e;
-		}
-		return pageName;
-	}	
+	/**@Test4
+	 * about this method clickOnRegisterLinkandFillTheForms() 
+	 * @param : Map<String, String>
+	 * @description : Click on the register and fill data in all fields
+	 * @return : boolean
+	 * @author : Yaksha
+	 */
 	
-	
-	public DemoRegisterPages fillRegisterForm(Map<String, String> expectedData) throws Exception {
+	public boolean clickOnRegisterLinkandFillTheForms(Map<String, String> expectedData) throws Exception {
 		try {
-			Thread.sleep(5000);
-			commonEvents.sendKeys(firstNameTextbox,expectedData.get("firstName"));	
-			commonEvents.sendKeys(lastNameTextbox,expectedData.get("lastName"));	
-			commonEvents.sendKeys(addressInputAreabox,expectedData.get("adds"));	
-			commonEvents.sendKeys(emailAddressTextbox,expectedData.get("emaiI"));	
-			commonEvents.sendKeys(phoneNumberTextbox,expectedData.get("phoneNo"));
-			commonEvents.click(maleRadioButton);
-			commonEvents.click(CricketCheckBox);
-			commonEvents.click(MoviesCheckBox);
-			commonEvents.click(HockeyCheckBox);
-			commonEvents.click(languageDropdown);
-			commonEvents.click(selectEnglish);
-			commonEvents.click(selectHindi);
-			commonEvents.selectByVisibleText(skillsDropdown, "Java");
-			commonEvents.selectByVisibleText(countryDropdown, "Select Country");
-		    commonEvents.click(clickOnCountryDropdown);
-		    commonEvents.click(selectCountryIndia);
-		    commonEvents.selectByValue(selectYear, "1996");
-		    commonEvents.selectByVisibleText(selectMonth, "June");
-		    commonEvents.selectByValue(selectDate, "25");  
-		    commonEvents.sendKeys(password,expectedData.get("password"));
-		    commonEvents.sendKeys(confirmPassword,expectedData.get("confirmPassword"));		
-			commonEvents.click(submitButton);
+			    commonEvents.click(RegisterNavigationMenu);
+			    commonEvents.sendKeys(firstNameTextbox,expectedData.get("firstName"));	
+			    commonEvents.sendKeys(lastNameTextbox,expectedData.get("lastName"));	
+				commonEvents.sendKeys(addressInputAreabox,expectedData.get("adds"));	
+				commonEvents.sendKeys(emailAddressTextbox,expectedData.get("emaiI"));	
+				commonEvents.sendKeys(phoneNumberTextbox,expectedData.get("phoneNo"));
+				Thread.sleep(4000);
+				commonEvents.click(maleRadioButton);
+				commonEvents.click(CricketCheckBox);
+				commonEvents.click(MoviesCheckBox);
+				commonEvents.click(HockeyCheckBox);
+				commonEvents.click(languageDropdown);
+				commonEvents.click(selectEnglish);
+				commonEvents.click(selectHindi);
+				commonEvents.selectByVisibleText(skillsDropdown, "Java");
+				commonEvents.selectByVisibleText(countryDropdown, "Select Country");
+			    commonEvents.click(clickOnCountryDropdown);
+			    commonEvents.click(selectCountryIndia);
+			    commonEvents.selectByValue(selectYear, "1996");
+			    commonEvents.selectByVisibleText(selectMonth, "June");
+			    commonEvents.selectByValue(selectDate, "25");  
+			    commonEvents.sendKeys(password,expectedData.get("password"));
+			    commonEvents.sendKeys(confirmPassword,expectedData.get("confirmPassword"));		
+				commonEvents.click(submitButton);
 		}catch(Exception e) {
 			throw e;
 		}
-		return new DemoRegisterPages(driver);
+		return true;
 	}
+	/**@Test5
+	 * about this method clickOnSelectCountryDropdownAndSelectEachCountryOneByOne() 
+	 * @param : null
+	 * @description : refresh the page and click and country drop down and select all the country from the drop down
+	 * @return : boolean
+	 * @author : Yaksha
+	 */
 	
-	public DemoRegisterPages fillAndValidateTheRegisterForm(Map<String, String> expectedData) throws Exception {
+	public boolean clickOnSelectCountryDropdownAndSelectEachCountryOneByOne() throws Exception {
 		try {
-			commonEvents.sendKeys(firstNameTextbox,expectedData.get("firstName"));	
-			commonEvents.sendKeys(lastNameTextbox,expectedData.get("lastName"));	
-			commonEvents.sendKeys(addressInputAreabox,expectedData.get("adds"));	
-			commonEvents.sendKeys(emailAddressTextbox,expectedData.get("emaiI"));	
-			commonEvents.sendKeys(phoneNumberTextbox,expectedData.get("phoneNo"));
-			commonEvents.click(maleRadioButton);
-			commonEvents.click(CricketCheckBox);
-			commonEvents.click(MoviesCheckBox);
-			commonEvents.click(HockeyCheckBox);
-			commonEvents.click(languageDropdown);
-			commonEvents.click(selectEnglish);
-			commonEvents.click(selectHindi);
-			commonEvents.selectByVisibleText(skillsDropdown, "Java");
-			commonEvents.selectByVisibleText(countryDropdown, "Select Country");
-		    commonEvents.click(clickOnCountryDropdown);
-		    commonEvents.click(selectCountryIndia);
-		    commonEvents.selectByValue(selectYear, "1996");
-		    commonEvents.selectByVisibleText(selectMonth, "June");
-		    commonEvents.selectByValue(selectDate, "25");  
-		    commonEvents.sendKeys(password,expectedData.get("password"));
-		    commonEvents.sendKeys(confirmPassword,expectedData.get("confirmPassword"));
-			commonEvents.clear(phoneNumberTextbox);
-			commonEvents.click(submitButton);
-		}catch(Exception e) {
-			throw e;
-		}
-		return new DemoRegisterPages(driver);
-	}
-
-	public DemoRegisterPages clickOnSelectCountryDropdownAndSelectEachCountryOneByOne() throws Exception {
-		try {
-			 commonEvents.click(refreshButton); 
-			 commonEvents.click(clickOnCountryDropdown);
+			driver.navigate().refresh();
+			Thread.sleep(3000);
+			commonEvents.click(clickOnCountryDropdown);
 			 commonEvents.click(selectCountryAustralia); 
 			 commonEvents.click(clickOnCountryDropdown);
 			 commonEvents.click(selectCountryBangladesh); 
@@ -251,61 +203,40 @@ public class DemoRegisterPages extends StartupPage
 			 commonEvents.click(clickOnCountryDropdown);
 			 commonEvents.click(selectCountrySouthAfrica);
 			 commonEvents.click(clickOnCountryDropdown);
-			 commonEvents.click(selectCountryUnitedStatesOfAmerica);
-			 
+			 commonEvents.click(selectCountryUnitedStatesOfAmerica); 
 		}catch(Exception e) {
 			throw e;
 		}
-		return new DemoRegisterPages(driver);
-	}
-	
+		return true;
+}
+	/**@Test6
+	 * about this method selectEachCountryOneByOneFromCountryDrpdownAndValidate() 
+	 * @param : null
+	 * @description : refresh the page and click on country dropdown then select Australia and get the value and validate it 
+	 * @return : String
+	 * @author : Yaksha
+	 */
 
-	public DemoRegisterPages selectEachCountryOneByOneFromCountryDrpdownAndValidate() throws Exception {
-		try {
-			softAssert = new SoftAssert();
-			
-			 commonEvents.click(refreshButton);
-			 
+	public String selectAustraliaInCountryDrpdownAndValidate() throws Exception {
+		try {			
+			 commonEvents.click(refreshButton);			 
 			 commonEvents.click(clickOnCountryDropdown);
-			 commonEvents.click(selectCountryAustralia);
-			 
+			 commonEvents.click(selectCountryAustralia);		 
 			 String getCountryNameFromCountryDropdown = commonEvents.getText(clickOnCountryDropdown);
-			 System.out.println("Fetch the selected Country Name "+ getCountryNameFromCountryDropdown);
-//			 Reporter.log("Fetch the selected Country Name :"+ getCountryNameFromCountryDropdown);
-			 
-			 String ExpectedCountryName = "Australia" ;
-			 System.out.println("Expected Country Name : "+ ExpectedCountryName);
-			 
-			 softAssert.assertEquals(getCountryNameFromCountryDropdown, ExpectedCountryName, 
-						"Selected Country is not matching, please check manually");	
-			 
-			 Reporter.log("Selected country Validated");
-						
-			 commonEvents.click(clickOnCountryDropdown);
-			 commonEvents.click(selectCountryBangladesh);
-			 commonEvents.click(clickOnCountryDropdown);
-			 commonEvents.click(selectCountryDenmark);
-			 commonEvents.click(clickOnCountryDropdown);
-			 commonEvents.click(selectCountryHongKong);
-			 commonEvents.click(clickOnCountryDropdown);
-			 commonEvents.click(selectCountryIndia);
-			 commonEvents.click(clickOnCountryDropdown);
-			 commonEvents.click(selectCountryJapan);
-			 commonEvents.click(clickOnCountryDropdown);
-			 commonEvents.click(selectCountryNetherlands);
-			 commonEvents.click(clickOnCountryDropdown);
-			 commonEvents.click(selectCountryNewZealand);
-			 commonEvents.click(clickOnCountryDropdown);
-			 commonEvents.click(selectCountrySouthAfrica);
-			 commonEvents.click(clickOnCountryDropdown);
-			 commonEvents.click(selectCountryUnitedStatesOfAmerica);
+			 System.out.println("Fetch the selected Country Name "+ getCountryNameFromCountryDropdown);		
+			 return getCountryNameFromCountryDropdown;
 		}catch(Exception e) {
 			throw e;
 		}
-		return new DemoRegisterPages(driver);
 	}
-	
-	public DemoRegisterPages checkAndUncheckEachHobbyCheckBox() throws Exception {
+	/**@Test7
+	 * about this method selectEachCountryOneByOneFromCountryDrpdownAndValidate() 
+	 * @param : null
+	 * @description : check all the check boxes and validate hockey check box is selected or not
+	 * @return : boolean
+	 * @author : Yaksha
+	 */
+	public boolean checkandUncheckEachCheckBoxAndValidateThatCheckBox() throws Exception {
 		try {
 			commonEvents.click(CricketCheckBox);
 			commonEvents.click(CricketCheckBox);
@@ -316,388 +247,114 @@ public class DemoRegisterPages extends StartupPage
 			commonEvents.click(CricketCheckBox);
 			commonEvents.click(MoviesCheckBox);
 			commonEvents.click(HockeyCheckBox);
-			
-		}catch(Exception e) {
-			throw e;
-		}
-		return new DemoRegisterPages(driver);
-	}
-	
-	public DemoRegisterPages validateCheckBoxesRespondingCorrectllyToUserInterAction_AllowingSelectionAndDeselection() throws Exception {
-		try {
-			commonEvents.click(refreshButton);
-			
-			
-			WebElement clickOnCricketCheckBox = driver.findElement(By.xpath("//input[@value='Cricket']"));
-			WebElement clickOnMoviesCheckBox = driver.findElement(By.xpath("//input[@value='Movies']"));
 			WebElement clickOnHockeyCheckBox = driver.findElement(By.xpath("//input[@value='Hockey']"));
-			
-			//for check the each checkboxes
-			clickOnCricketCheckBox.click();
-
-			clickOnMoviesCheckBox.click();
-			Thread.sleep(2000);
-			clickOnHockeyCheckBox.click();
-			Thread.sleep(2000);
-			
-			//for Un- check the each checkboxes
-			clickOnCricketCheckBox.click();
-			Thread.sleep(2000);
-			clickOnMoviesCheckBox.click();
-			Thread.sleep(2000);
-			clickOnHockeyCheckBox.click();
-			Thread.sleep(2000);
-			
-			 // Verify that checkboxes are initially unchecked
-	        if (!clickOnCricketCheckBox.isSelected() && !clickOnMoviesCheckBox.isSelected() && !clickOnHockeyCheckBox.isSelected()) {
-	            System.out.println("Checkboxes are initially unchecked.");
-	        } else {
-	            System.out.println("Checkboxes are not initially unchecked.");
-	        }
-	        Thread.sleep(2000);
-	        
-	        // Click on each checkbox to select it and verify that it becomes checked
-	        clickOnCricketCheckBox.click();
-	        if (clickOnCricketCheckBox.isSelected()) {
-	            System.out.println("Cricket checkbox is selected.");
-	        } else {
-	            System.out.println("Cricket checkbox is not selected.");
-	        }
-	        Thread.sleep(2000);
-
-	        clickOnMoviesCheckBox.click();
-	        if (clickOnMoviesCheckBox.isSelected()) {
-	            System.out.println("Movies checkbox is selected.");
-	        } else {
-	            System.out.println("Movies checkbox is not selected.");
-	        }
-	        Thread.sleep(2000);
-
-	        clickOnHockeyCheckBox.click();
-	        if (clickOnHockeyCheckBox.isSelected()) {
-	            System.out.println("Hockey checkbox is selected.");
-	        } else {
-	            System.out.println("Hockey checkbox is not selected.");
-	        }
-	        Thread.sleep(2000);
-
-	        // Click on each checkbox again to deselect it and verify that it becomes unchecked
-	        clickOnCricketCheckBox.click();
-	        if (!clickOnCricketCheckBox.isSelected()) {
-	            System.out.println("Cricket checkbox is deselected.");
-	        } else {
-	            System.out.println("Cricket checkbox is still selected.");
-	        }
-	        Thread.sleep(2000);
-
-	        clickOnMoviesCheckBox.click();
-	        if (!clickOnMoviesCheckBox.isSelected()) {
-	            System.out.println("Movies checkbox is deselected.");
-	        } else {
-	            System.out.println("Movies checkbox is still selected.");
-	        }
-	        Thread.sleep(2000);
-
-	        clickOnHockeyCheckBox.click();
-	        if (!clickOnHockeyCheckBox.isSelected()) {
-	            System.out.println("Hockey checkbox is deselected.");
-	        } else {
-	            System.out.println("Hockey checkbox is still selected.");
-	        }
-	        Thread.sleep(2000);
-
-			
+			clickOnHockeyCheckBox.isSelected();
 		}catch(Exception e) {
 			throw e;
 		}
-		return new DemoRegisterPages(driver);
+		return true;
 	}
 	
-	public DemoRegisterPages selectEachRadioButton() throws Exception {
+	/**@Test8
+	 * about this method selecteachRadioButtonvalidateEachRadioButtonoptionShouldBeSelectableAttime() 
+	 * @param : null
+	 * @description :  select each Radio Button validate Each Radio Button option Should Be selectable At time
+	 * @return : boolean
+	 * @author : Yaksha
+	 */
+	public boolean selecteachRadioButtonvalidateEachRadioButtonoptionShouldBeSelectableAttime() throws Exception {
 		try {
 			commonEvents.click(maleRadioButton);
+			WebElement maleRadioButton = driver.findElement(By.xpath("//input[@value='Male']"));
+			maleRadioButton.isSelected();
 			Thread.sleep(2000);
 			commonEvents.click(feMaleRadioButton);
+			WebElement femaleRadioButton = driver.findElement(By.xpath("//input[@value='FeMale']"));
+			femaleRadioButton.isSelected();
 			Thread.sleep(2000);
 			
 		}catch(Exception e) {
 			throw e;
 		}
-		return new DemoRegisterPages(driver);
+		return true;
 	}
+		
+	/**@Test9
+	 * about this method selectYearMonthDate() 
+	 * @param : null
+	 * @description : select year,month and date in the dropdown using select class
+	 * @return : boolean
+	 * @author : Yaksha
+	 */
 	
-	public DemoRegisterPages validateEachRadioButtonoptionShouldBeSelectableAttime() throws Exception {
-		try {
-			WebElement maleRadioButton = driver.findElement(By.xpath("//input[@value='Male']"));
-			WebElement femaleRadioButton = driver.findElement(By.xpath("//input[@value='FeMale']"));
-			
-			 	// Verify that both radio buttons are initially unchecked
-	        if (!maleRadioButton.isSelected() && !femaleRadioButton.isSelected()) {
-	            System.out.println("Both radio buttons are initially unchecked.");
-	        } else {
-	            System.out.println("Both radio buttons are not initially unchecked.");
-	        }
-	        
-	       // Click on the male radio button
-	        maleRadioButton.click();
-
-	        // Verify that the male radio button is selected and the female is not
-	        if (maleRadioButton.isSelected() && !femaleRadioButton.isSelected()) {
-	            System.out.println("Male radio button is selected and Female radio button is not selected.");
-	        } else {
-	            System.out.println("Male radio button is not selected or Female radio button is selected.");
-	        }
-
-	        // Click on the female radio button
-	        femaleRadioButton.click();
-
-	        // Verify that the female radio button is selected and the male is not
-	        if (femaleRadioButton.isSelected() && !maleRadioButton.isSelected()) {
-	            System.out.println("Female radio button is selected and Male radio button is not selected.");
-	        } else {
-	            System.out.println("Female radio button is not selected or Male radio button is selected.");
-	        }
-
-			
-		}catch(Exception e) {
-			throw e;
-		}
-		return new DemoRegisterPages(driver);
-	}
-	
-	public DemoRegisterPages validatePasswordFieldForScenarioOneBySendingDifferentValues(String data) throws Exception {
-		try {
-			commonEvents.clear(password);	
-			commonEvents.clear(confirmPassword);	
-			
-			commonEvents.sendKeys(password,data);
-			commonEvents.sendKeys(confirmPassword,data);
-		}catch(Exception e) {
-			throw e;
-		}
-		return new DemoRegisterPages(driver);
-	}
-	
-	public DemoRegisterPages validatePasswordFieldForScenarioTwoBySendingDifferentValues(String data1, String data2) throws Exception {
-		try {
-			commonEvents.clear(password);	
-			commonEvents.clear(confirmPassword);	
-			
-			commonEvents.sendKeys(password,data1);
-			commonEvents.sendKeys(confirmPassword,data2);
-		}catch(Exception e) {
-			throw e;
-		}
-		return new DemoRegisterPages(driver);
-	}
-	
-	public DemoRegisterPages validatePasswordFieldForScenarioThreeBySendingDifferentValues(String data) throws Exception {
-		try {
-			commonEvents.clear(password);	
-			commonEvents.clear(confirmPassword);	
-			
-			commonEvents.sendKeys(password,data);
-			commonEvents.sendKeys(confirmPassword,data);
-		}catch(Exception e) {
-			throw e;
-		}
-		return new DemoRegisterPages(driver);
-	}
-	
-	public DemoRegisterPages selectYearMonthDate() throws Exception {
+	public boolean selectYearMonthDate() throws Exception {
 		try {
 			
 			WebElement selectYeardropdown = driver.findElement(By.xpath("//select[@placeholder='Year']"));
-			Select select3 = new Select(selectYeardropdown);
-			select3.selectByValue("1950");
+			Select select = new Select(selectYeardropdown);
+			select.selectByValue("1996");
+			selectYeardropdown.isSelected();
 			Thread.sleep(2000);
-			select3.selectByValue("1960");
-			Thread.sleep(2000);
-			select3.selectByValue("1970");
-			Thread.sleep(2000);
-			select3.selectByValue("1980");
-			Thread.sleep(2000);
-			select3.selectByValue("1990");
-			Thread.sleep(2000);
-			select3.selectByValue("2000");
-			Thread.sleep(2000);
-			select3.selectByValue("1996");
-			Thread.sleep(2000);
-	
-			
 			WebElement selectMonthdropdown = driver.findElement(By.xpath("//select[@placeholder='Month']"));
 			Select select4 = new Select(selectMonthdropdown);
 			select4.selectByVisibleText("June");
+			selectYeardropdown.isSelected();
 			Thread.sleep(2000);
-			select4.selectByVisibleText("August");
-			Thread.sleep(2000);
-			select4.selectByVisibleText("November");
-			Thread.sleep(2000);
-			select4.selectByVisibleText("March");
-			Thread.sleep(2000);
-			select4.selectByVisibleText("October");
-			Thread.sleep(2000);
-			select4.selectByVisibleText("May");
-			Thread.sleep(2000);
-			select4.selectByVisibleText("December");
-			Thread.sleep(2000);
-			select4.selectByVisibleText("April");
-			Thread.sleep(2000);
-			select4.selectByVisibleText("January");
-			Thread.sleep(2000);
-			select4.selectByVisibleText("July");
-			Thread.sleep(2000);
-			select4.selectByVisibleText("September");
-			Thread.sleep(2000);
-			select4.selectByVisibleText("February");
-			Thread.sleep(2000);
-			
-			
 			WebElement selectDatedropdown = driver.findElement(By.xpath("//select[@placeholder='Day']"));
 			Select select5 = new Select(selectDatedropdown);
 		    select5.selectByValue("25");	
+			selectYeardropdown.isSelected();
 		    Thread.sleep(2000);
-		    select5.selectByValue("20");	
-		    Thread.sleep(2000);
-		    select5.selectByValue("5");	
-		    Thread.sleep(2000);
-		    select5.selectByValue("1");	
-		    Thread.sleep(2000);
-		    select5.selectByValue("9");	
-		    Thread.sleep(2000);
-		    select5.selectByValue("10");	
-		    Thread.sleep(2000);
-		    select5.selectByValue("29");	
-		    Thread.sleep(2000);
-		    select5.selectByValue("14");	
-		    Thread.sleep(2000);
-			
 		}catch(Exception e) {
 			throw e;
 		}
-		return new DemoRegisterPages(driver);
+		return true;
 	}
 	
-	public DemoRegisterPages validateAccurateSelectableYearMonthDate() throws Exception {
-		try {
-			
-			softAssert = new SoftAssert();
-			
-			WebElement selectYeardropdown = driver.findElement(By.xpath("//select[@placeholder='Year']"));
-			Select selectYear = new Select(selectYeardropdown);
-			selectYear.selectByValue("1950");
-			Thread.sleep(2000);
-			
-			String ExpectedYear = "1950";
-			softAssert.assertEquals(selectYear.getFirstSelectedOption().getText(), ExpectedYear, 
-					"Selected Year is not matching please check manually");	
-			
-			System.out.println("Actual Selected Year : " + selectYear.getFirstSelectedOption().getText());
-			System.out.println("Expected Year : " + ExpectedYear);
-			System.out.println("Selected Year are captured accurately. ");
-			Thread.sleep(5000);	
-			
-			
-			WebElement selectMonthdropdown = driver.findElement(By.xpath("//select[@placeholder='Month']"));
-			Select selectMonth = new Select(selectMonthdropdown);
-			selectMonth.selectByVisibleText("June");
-			Thread.sleep(2000);
-			
-			String ExpectedMonth = "June";
-			softAssert.assertEquals(selectMonth.getFirstSelectedOption().getText(), ExpectedMonth, 
-					"Selected Month is not matching please check manually");	
-			
-			System.out.println("Actual Selected Month : " + selectMonth.getFirstSelectedOption().getText());
-			System.out.println("Expected Month : " + ExpectedMonth);
-			System.out.println("Selected Month are captured accurately. ");
-			Thread.sleep(5000);	
-			
-			WebElement selectDatedropdown = driver.findElement(By.xpath("//select[@placeholder='Day']"));
-			Select selectDate = new Select(selectDatedropdown);
-			selectDate.selectByValue("25");	
-			Thread.sleep(2000);
-			
-			String ExpectedDate = "25";
-			softAssert.assertEquals(selectDate.getFirstSelectedOption().getText(), ExpectedDate, 
-					"Selected Date is not matching please check manually");	
-			
-			System.out.println("Actual Selected Date : " + selectDate.getFirstSelectedOption().getText());
-			System.out.println("Expected Date : " + ExpectedDate);
-			System.out.println("Selected Date  are captured accurately. ");
-			Thread.sleep(5000);	
-			
-		}catch(Exception e) {
-			throw e;
-		}
-		return new DemoRegisterPages(driver);
-	}
-	
-	public DemoRegisterPages clickOnChooseFilUploadButton() throws Exception {
+	/**@Test10
+	 * about this method clickOnChooseFilUploadButtonAndUploadImage() 
+	 * @param : null
+	 * @description : click on choose file button and upload the image
+	 * @return : boolean
+	 * @author : Yaksha
+	 */
+	public boolean clickOnChooseFilUploadButtonAndUploadImage(String pathOfTheFile) throws Exception {
 		try {
 			 commonEvents.click(chooseFile);
 			 Thread.sleep(2000);
-			 
-			 StringSelection filePath = new StringSelection("D:\\AUTOMATION PROJECT FRAMEWORK\\Document\\invincixLogo.png");
-				Thread.sleep(2000);
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
-				
-				Robot robot = new Robot();
-				robot.keyPress(KeyEvent.VK_CONTROL);
-				robot.keyPress(KeyEvent.VK_V);
-				Thread.sleep(2000);
-				robot.keyRelease(KeyEvent.VK_CONTROL);
-				robot.keyRelease(KeyEvent.VK_V);
-				
-				robot.keyPress(KeyEvent.VK_TAB);
-				Thread.sleep(2000);
-				robot.keyPress(KeyEvent.VK_TAB);
-				Thread.sleep(2000);
-				robot.keyRelease(KeyEvent.VK_TAB);
-				
-				robot.keyPress(KeyEvent.VK_ENTER);
-				robot.keyRelease(KeyEvent.VK_ENTER);
-				
-				commonEvents.getTagName(chooseFile);
-				System.out.println("Choose file TagName :" + commonEvents.getTagName(chooseFile) );
-				
-				String uploadImageName = commonEvents.getText(chooseFile);
-				System.out.println("Choose file TextName :" + uploadImageName );
-				
+			 String pathOftheFile="C:\\Users\\Abhisek_Pc\\Desktop\\Screenshot (63).png";
+			 Thread.sleep(3000);
+			 commonEvents.fileUpload(pathOftheFile);
+			
 		}catch(Exception e) {
 			throw e;
 		}
-		return new DemoRegisterPages(driver);
+		return true;
 	}
 	
-	public String getUploadImageName() throws Exception {
+
+	/**@Test11
+	 * about this method validateMandetoryField() 
+	 * @param : Map<String, String>
+	 * @description :click on the register and fill first name text field,lastNameTextbox,,emailAddressTextbox and then click on submit button
+	 * @return : boolean
+	 * @author : Yaksha
+	 */
+	public boolean clickOnRegisterAndFillFirstNameTextboxlastNameTextboxaddressInputAreaboxemailAddressTextboxAndsubmitButton(Map<String, String> expectedData) throws Exception {
 		try {
-			WebElement actualUploadedImageElement = driver.findElement(By.xpath("//input[@id='imagesrc']"));
-			String actualUploadedImageText = actualUploadedImageElement.getText();
-			System.out.println("Actual upload Image Name : " + actualUploadedImageText );
-			
-			String ExpectedUploadedImageName = "invincixLogo.png";
-			System.out.println("Expected upload Image Name : " + ExpectedUploadedImageName );
-			
-			softAssert.assertEquals(actualUploadedImageText, ExpectedUploadedImageName, 
-					"Selected Date is not matching please check manually");	
-			
+			    commonEvents.click(RegisterNavigationMenu);
+			    commonEvents.sendKeys(firstNameTextbox,expectedData.get("firstName"));	
+			    commonEvents.sendKeys(lastNameTextbox,expectedData.get("lastName"));	
+				commonEvents.sendKeys(addressInputAreabox,expectedData.get("adds"));	
+				commonEvents.sendKeys(emailAddressTextbox,expectedData.get("emaiI"));
+				Thread.sleep(5000);
+				commonEvents.jsClick(submitButton);
+				
+
 		}catch(Exception e) {
 			throw e;
 		}
-		return pageName;
-	}
-	
-	public DemoRegisterPages validateMandetoryField() throws Exception {
-		try {
-	
-            WebElement phoneNumberTextbox = driver.findElement(By.xpath("//input[@type='tel']"));
-            String tooltipText = phoneNumberTextbox.getAttribute("title");
-            System.out.println("Error message: " + tooltipText);
-            
-		}catch(Exception e) {
-			throw e;
-		}
-		return new DemoRegisterPages(driver);
+		return true;
 	}
 
 }
