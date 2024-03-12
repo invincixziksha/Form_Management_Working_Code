@@ -20,7 +20,7 @@ public class StartupPage {
 	
 	public void navigateToUrl(String url) throws Exception {
 		
-		commonEvents.navigateTo(url);		
+		commonEvents.navigateTo(url);		 
 	}
 
 }

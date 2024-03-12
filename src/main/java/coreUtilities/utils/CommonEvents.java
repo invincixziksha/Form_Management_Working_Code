@@ -66,7 +66,7 @@ public class CommonEvents
 
 	public CommonEvents(WebDriver driver) 
 	{
-		this.driver=driver;
+		this.driver=driver; 
 	}
 	
 	/**
@@ -121,6 +121,19 @@ public class CommonEvents
 		
 		return flag;
 	}
+	
+	/**
+	 * This method is responsible to find the element from the DOM. 
+	 * If found then it'll return true else it'll return false.
+	 * In this case it'll try to find the element in the entire DOM, so it might consume sometime
+	 * 
+	 * @param by
+	 * @return boolean
+	 */
+	public boolean isEmpty(By by) {
+        WebElement element = driver.findElement(by);
+        return element.getText().isEmpty();
+    }
 	
 	/**
 	 * This method is responsible to find the element from the DOM. 

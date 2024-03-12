@@ -46,7 +46,7 @@ public class FileOperations
 		connection = fillo.getConnection(file);
 		Recordset rs = connection.executeQuery(readQuery);
 		Map<String, String> excelData = new HashMap<String, String>();
-		ArrayList<String> fieldNames = rs.getFieldNames();
+		ArrayList<String> fieldNames = rs.getFieldNames(); 
 		while(rs.next())
 		{
 			fieldNames.forEach(s->{

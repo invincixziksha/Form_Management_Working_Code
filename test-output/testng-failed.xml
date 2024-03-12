@@ -14,13 +14,13 @@
       </run>
     </groups>
     <classes>
-      <class name="testcases.DemoAutomationRegister">
+      <class name="testcases.DemoAutomationRegisterL2">
         <methods>
-          <include name="tearDown"/>
           <include name="initBrowser"/>
-          <include name="clickOnRegisterLinkAndFillTheForms"/>
+          <include name="tearDown"/>
+          <include name="goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage"/>
         </methods>
-      </class> <!-- testcases.DemoAutomationRegister -->
+      </class> <!-- testcases.DemoAutomationRegisterL2 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

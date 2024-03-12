@@ -38,7 +38,7 @@ public class TestBase
 			}
 			else if(browser.equalsIgnoreCase("Firefox"))
 			{
-				WebDriverManager.firefoxdriver().setup();
+				WebDriverManager.firefoxdriver().setup(); 
 				driver = new FirefoxDriver();
 			}
 			else if(browser.equalsIgnoreCase("ChromeHeadless"))

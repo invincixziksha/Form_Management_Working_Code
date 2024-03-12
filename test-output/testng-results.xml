@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Selected country Validated]]>
-    </line>
   </reporter-output>
-  <suite started-at="2024-03-11T16:26:51 IST" name="Suite" finished-at="2024-03-11T16:29:43 IST" duration-ms="171217">
+  <suite started-at="2024-03-12T17:12:58 IST" name="Suite" finished-at="2024-03-12T17:13:57 IST" duration-ms="59502">
     <groups>
       <group name="sanity">
-        <method signature="DemoAutomationRegister.DemoRegisterAutomation()[pri:1, instance:testcases.DemoAutomationRegister@60975100]" name="DemoRegisterAutomation" class="testcases.DemoAutomationRegister"/>
-        <method signature="DemoAutomationRegister.clickOnSwitchToAlertAndValidateTitlePage()[pri:2, instance:testcases.DemoAutomationRegister@60975100]" name="clickOnSwitchToAlertAndValidateTitlePage" class="testcases.DemoAutomationRegister"/>
-        <method signature="DemoAutomationRegister.handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup()[pri:3, instance:testcases.DemoAutomationRegister@60975100]" name="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup" class="testcases.DemoAutomationRegister"/>
-        <method signature="DemoAutomationRegister.clickOnRegisterLinkAndFillTheForms()[pri:4, instance:testcases.DemoAutomationRegister@60975100]" name="clickOnRegisterLinkAndFillTheForms" class="testcases.DemoAutomationRegister"/>
-        <method signature="DemoAutomationRegister.clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne()[pri:5, instance:testcases.DemoAutomationRegister@60975100]" name="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne" class="testcases.DemoAutomationRegister"/>
-        <method signature="DemoAutomationRegister.clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown()[pri:6, instance:testcases.DemoAutomationRegister@60975100]" name="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown" class="testcases.DemoAutomationRegister"/>
-        <method signature="DemoAutomationRegister.checkAndUncheckEachCheckBoxAndValidateThatCheckBox()[pri:7, instance:testcases.DemoAutomationRegister@60975100]" name="checkAndUncheckEachCheckBoxAndValidateThatCheckBox" class="testcases.DemoAutomationRegister"/>
-        <method signature="DemoAutomationRegister.selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect()[pri:8, instance:testcases.DemoAutomationRegister@60975100]" name="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect" class="testcases.DemoAutomationRegister"/>
-        <method signature="DemoAutomationRegister.passwordValidationForDifferentScenarios()[pri:9, instance:testcases.DemoAutomationRegister@60975100]" name="passwordValidationForDifferentScenarios" class="testcases.DemoAutomationRegister"/>
-        <method signature="DemoAutomationRegister.DateOfBirthValidation()[pri:10, instance:testcases.DemoAutomationRegister@60975100]" name="DateOfBirthValidation" class="testcases.DemoAutomationRegister"/>
-        <method signature="DemoAutomationRegister.fileUploadAction()[pri:11, instance:testcases.DemoAutomationRegister@60975100]" name="fileUploadAction" class="testcases.DemoAutomationRegister"/>
-        <method signature="DemoAutomationRegister.filltheRegisterFormAndValidateErrorMessage()[pri:12, instance:testcases.DemoAutomationRegister@60975100]" name="filltheRegisterFormAndValidateErrorMessage" class="testcases.DemoAutomationRegister"/>
+        <method signature="DemoAutomationRegisterL2.goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage()[pri:1, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" name="goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage" class="testcases.DemoAutomationRegisterL2"/>
+        <method signature="DemoAutomationRegisterL2.goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle()[pri:2, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" name="goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle" class="testcases.DemoAutomationRegisterL2"/>
+        <method signature="DemoAutomationRegisterL2.thenFillTheRegisterFormAndClickOnRefreshButton()[pri:3, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" name="thenFillTheRegisterFormAndClickOnRefreshButton" class="testcases.DemoAutomationRegisterL2"/>
+        <method signature="DemoAutomationRegisterL2.VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields()[pri:4, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" name="VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields" class="testcases.DemoAutomationRegisterL2"/>
+        <method signature="DemoAutomationRegisterL2.verifyTitleOfNewTab()[pri:5, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" name="verifyTitleOfNewTab" class="testcases.DemoAutomationRegisterL2"/>
+        <method signature="DemoAutomationRegisterL2.verifyTitleOfNewWindows()[pri:6, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" name="verifyTitleOfNewWindows" class="testcases.DemoAutomationRegisterL2"/>
+        <method signature="DemoAutomationRegisterL2.verifyTitleOfMultipleWindows()[pri:7, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" name="verifyTitleOfMultipleWindows" class="testcases.DemoAutomationRegisterL2"/>
+        <method signature="DemoAutomationRegisterL2.gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage()[pri:8, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" name="gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage" class="testcases.DemoAutomationRegisterL2"/>
+        <method signature="DemoAutomationRegisterL2.selecttheSeleniumLogoAndPerformDragAndDropOperation()[pri:9, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" name="selecttheSeleniumLogoAndPerformDragAndDropOperation" class="testcases.DemoAutomationRegisterL2"/>
+        <method signature="DemoAutomationRegisterL2.verifyTextofAnyToggleActionInsideOfAccordionListMenu()[pri:10, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" name="verifyTextofAnyToggleActionInsideOfAccordionListMenu" class="testcases.DemoAutomationRegisterL2"/>
+        <method signature="DemoAutomationRegisterL2.verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue()[pri:11, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" name="verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue" class="testcases.DemoAutomationRegisterL2"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2024-03-11T16:26:51 IST" name="Test" finished-at="2024-03-11T16:29:43 IST" duration-ms="171217">
-      <class name="testcases.DemoAutomationRegister">
-        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:26:51 IST" name="initBrowser" finished-at="2024-03-11T16:27:04 IST" duration-ms="12780" status="PASS">
+    <test started-at="2024-03-12T17:12:58 IST" name="Test" finished-at="2024-03-12T17:13:57 IST" duration-ms="59502">
+      <class name="testcases.DemoAutomationRegisterL2">
+        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:12:58 IST" name="initBrowser" finished-at="2024-03-12T17:13:13 IST" duration-ms="15126" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -40,62 +36,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method signature="DemoRegisterAutomation()[pri:1, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:04 IST" name="DemoRegisterAutomation" description="Navigate to the URL and Validate the Home Page" finished-at="2024-03-11T16:27:04 IST" duration-ms="85" status="PASS">
+        <test-method signature="goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage()[pri:1, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:13:13 IST" name="goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage" description="Go to home, then click on Sign-In button and validate the title of the Sign-In page" finished-at="2024-03-12T17:13:14 IST" duration-ms="984" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DemoRegisterAutomation -->
-        <test-method signature="clickOnSwitchToAlertAndValidateTitlePage()[pri:2, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:04 IST" name="clickOnSwitchToAlertAndValidateTitlePage" description="Click SwitchTo à Alert Link. and Validate if control is navigated to new page" finished-at="2024-03-11T16:27:07 IST" duration-ms="2990" status="PASS">
+        </test-method> <!-- goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage -->
+        <test-method signature="goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle()[pri:2, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:13:14 IST" name="goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle" description="go back to index page and click on Skip signIn button and validate the Register page title." finished-at="2024-03-12T17:13:16 IST" duration-ms="2676" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnSwitchToAlertAndValidateTitlePage -->
-        <test-method signature="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup()[pri:3, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:07 IST" name="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup" description="Click on button to display the alert box and Validate if alert popup is shown." finished-at="2024-03-11T16:27:10 IST" duration-ms="3099" status="PASS">
+        </test-method> <!-- goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle -->
+        <test-method signature="thenFillTheRegisterFormAndClickOnRefreshButton()[pri:3, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:13:16 IST" name="thenFillTheRegisterFormAndClickOnRefreshButton" description="Then fill the register form and click on Refresh button" finished-at="2024-03-12T17:13:22 IST" duration-ms="5358" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup -->
-        <test-method signature="clickOnRegisterLinkAndFillTheForms()[pri:4, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:10 IST" name="clickOnRegisterLinkAndFillTheForms" description="Click on Register menu option to navigate to Register page. and  Fill the form with data provided in excel sheet." finished-at="2024-03-11T16:27:21 IST" duration-ms="11108" status="PASS">
+        </test-method> <!-- thenFillTheRegisterFormAndClickOnRefreshButton -->
+        <test-method signature="VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields()[pri:4, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:13:22 IST" name="VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields" description="Verify that clicking on refresh button its refreshing all the entered data in all the fields" finished-at="2024-03-12T17:13:24 IST" duration-ms="2411" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnRegisterLinkAndFillTheForms -->
-        <test-method signature="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne()[pri:5, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:22 IST" name="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne" description="Click on the country dropdown and Select each country option one by one." finished-at="2024-03-11T16:27:26 IST" duration-ms="4913" status="PASS">
+        </test-method> <!-- VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields -->
+        <test-method signature="verifyTitleOfNewTab()[pri:5, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:13:24 IST" name="verifyTitleOfNewTab" description="Go to SwitchTo Tab clickOn Window and then click on Click and validate the title of new tab page" finished-at="2024-03-12T17:13:32 IST" duration-ms="7860" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne -->
-        <test-method signature="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown()[pri:6, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:26 IST" name="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown" description="Click on the country dropdown and Validate if each country option is selectable from the dropdown." finished-at="2024-03-11T16:27:31 IST" duration-ms="4238" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Selected country Validated]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown -->
-        <test-method signature="checkAndUncheckEachCheckBoxAndValidateThatCheckBox()[pri:7, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:27:31 IST" name="checkAndUncheckEachCheckBoxAndValidateThatCheckBox" description=" Check and uncheck each hobby checkbox and Validate that the checkboxes are responding correctly to user interaction, allowing selection and deselection." finished-at="2024-03-11T16:28:00 IST" duration-ms="29235" status="PASS">
+        </test-method> <!-- verifyTitleOfNewTab -->
+        <test-method signature="verifyTitleOfNewWindows()[pri:6, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:13:32 IST" name="verifyTitleOfNewWindows" description="Go to SwitchTo Tab clickOn Window and then click on Open new separate window and click and validate the title of new windows page" finished-at="2024-03-12T17:13:35 IST" duration-ms="3267" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkAndUncheckEachCheckBoxAndValidateThatCheckBox -->
-        <test-method signature="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect()[pri:8, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:28:00 IST" name="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect" description="Select each radio button option for gender and Validate that only one radio button option should be selectable at a time." finished-at="2024-03-11T16:28:05 IST" duration-ms="4614" status="PASS">
+        </test-method> <!-- verifyTitleOfNewWindows -->
+        <test-method signature="verifyTitleOfMultipleWindows()[pri:7, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:13:35 IST" name="verifyTitleOfMultipleWindows" description="Go to SwitchTo Tab clickOn Window and then click on Open separate multiple window and click" finished-at="2024-03-12T17:13:41 IST" duration-ms="6068" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect -->
-        <test-method signature="passwordValidationForDifferentScenarios()[pri:9, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:28:05 IST" name="passwordValidationForDifferentScenarios" description="passwordValidation_for_Different_Scenarios" finished-at="2024-03-11T16:28:07 IST" duration-ms="2120" status="PASS">
+        </test-method> <!-- verifyTitleOfMultipleWindows -->
+        <test-method signature="gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage()[pri:8, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:13:41 IST" name="gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage" description="Go to Interaction clickOn Drag and Drop and click on static validate the title of the Drag and Drop page." finished-at="2024-03-12T17:13:44 IST" duration-ms="2480" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- passwordValidationForDifferentScenarios -->
-        <test-method signature="DateOfBirthValidation()[pri:10, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:28:07 IST" name="DateOfBirthValidation" description="Select different dates from the Date Of Birth fields_Validate that dates are selectable" finished-at="2024-03-11T16:29:29 IST" duration-ms="82032" status="PASS">
+        </test-method> <!-- gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage -->
+        <test-method signature="selecttheSeleniumLogoAndPerformDragAndDropOperation()[pri:9, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:13:44 IST" name="selecttheSeleniumLogoAndPerformDragAndDropOperation" description="Select the selenium logo and perform Drag and Drop operation" finished-at="2024-03-12T17:13:50 IST" duration-ms="5945" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DateOfBirthValidation -->
-        <test-method signature="fileUploadAction()[pri:11, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:29:29 IST" name="fileUploadAction" description="Click on the image upload button and Choose an image file from the file system _ Validate that the selected image should be displayed on the page after upload." finished-at="2024-03-11T16:29:39 IST" duration-ms="10684" status="PASS">
+        </test-method> <!-- selecttheSeleniumLogoAndPerformDragAndDropOperation -->
+        <test-method signature="verifyTextofAnyToggleActionInsideOfAccordionListMenu()[pri:10, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:13:50 IST" name="verifyTextofAnyToggleActionInsideOfAccordionListMenu" description="Go to Widget Tab clickOn Accordio and Select Any Groups And Fetch the Data" finished-at="2024-03-12T17:13:52 IST" duration-ms="2630" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fileUploadAction -->
-        <test-method signature="filltheRegisterFormAndValidateErrorMessage()[pri:12, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:29:39 IST" name="filltheRegisterFormAndValidateErrorMessage" description="Fill the register form, leave any mandetory field (Phone No) and Verify that error messages for incomplete field displayed as appropriate." finished-at="2024-03-11T16:29:42 IST" duration-ms="2951" status="PASS">
+        </test-method> <!-- verifyTextofAnyToggleActionInsideOfAccordionListMenu -->
+        <test-method signature="verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue()[pri:11, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:13:52 IST" name="verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue" description="Go to Widget Tab clickOn Auto complete and verify the auto complete textbox is present or not then pass the value" finished-at="2024-03-12T17:13:57 IST" duration-ms="4100" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- filltheRegisterFormAndValidateErrorMessage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DemoAutomationRegister@60975100]" started-at="2024-03-11T16:29:42 IST" name="tearDown" finished-at="2024-03-11T16:29:43 IST" duration-ms="256" status="PASS">
+        </test-method> <!-- verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.DemoAutomationRegisterL2@2f19f2aa]" started-at="2024-03-12T17:13:57 IST" name="tearDown" finished-at="2024-03-12T17:13:57 IST" duration-ms="457" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.DemoAutomationRegister -->
+      </class> <!-- testcases.DemoAutomationRegisterL2 -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

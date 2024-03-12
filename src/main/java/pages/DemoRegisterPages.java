@@ -114,7 +114,7 @@ public class DemoRegisterPages extends StartupPage
 		}catch(Exception e) {
 			throw e;
 		}
-		return new DemoRegisterPages(driver);
+		return new DemoRegisterPages(driver); 
 	}
 	
 	public DemoRegisterPages clickOnRegisterNavigationMenu() throws Exception {
@@ -156,8 +156,6 @@ public class DemoRegisterPages extends StartupPage
 	        Thread.sleep(3000);
 	        alert.accept();
 	        Assert.assertEquals(alertMessage, "I am an alert box!");
-			
-			
 		}
 		catch(Exception e) 
 		{
