@@ -15,7 +15,7 @@
 		<parameter name="browser" value="chrome" />
 		<parameter name="environment" value="dev" />
 		<classes>
-			<class name="testcases.DemoAutomationRegisterL2" />
+			<class name="testcases.FormManagement_L2_Testcases" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

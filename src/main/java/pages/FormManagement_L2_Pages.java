@@ -6,7 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class DemoRegisterL2 extends StartupPage 
+public class FormManagement_L2_Pages extends StartupPage 
 {
 
 	By firstNameTextbox = By.xpath("//input[@placeholder='First Name']"); 
@@ -62,7 +62,7 @@ public class DemoRegisterL2 extends StartupPage
 
 
 	//constructor Initialization
-	public DemoRegisterL2(WebDriver driver) 
+	public FormManagement_L2_Pages(WebDriver driver) 
 	{
 		super(driver);
 	}	

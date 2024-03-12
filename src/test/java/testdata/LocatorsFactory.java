@@ -16,6 +16,13 @@ public class LocatorsFactory extends StartupPage {
 	By firstNameTextbox = By.xpath("//input[@placeholder='First Name']"); 
 	By emailTextField = By.xpath("//input[@placeholder=\"E mail\"]"); 
 	By switchToNavigationMenu = By.xpath("//a[contains(text() , 'SwitchTo')]"); 
+	
+	
+	By shopIconButton = By.xpath("//a[.='Shop']"); 
+
+	By alertWithOk = By.xpath("//a[.='Alert with OK ']"); 
+
+	By countryDropdown = By.xpath("//select[@id='countries']"); 
 
 	public LocatorsFactory(WebDriver driver) {
 		super(driver);
@@ -60,6 +67,17 @@ public class LocatorsFactory extends StartupPage {
 	public WebElement getswitchToNavigationMenu(WebDriver driver) {
 		WebElement switchToNavigationMenuWebElement = driver.findElement(switchToNavigationMenu);
         return switchToNavigationMenuWebElement;
+    }
+	
+	public WebElement getAlertWithOkButton(WebDriver driver) {
+		WebElement alertWithOkWebElement = driver.findElement(alertWithOk);
+        return alertWithOkWebElement;
+    }
+
+	
+	public WebElement countryDropdownIsPresent(WebDriver driver) {
+		WebElement countryDropdownWebElement = driver.findElement(countryDropdown);
+        return countryDropdownWebElement;
     }
 
 }
