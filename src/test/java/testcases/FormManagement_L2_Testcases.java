@@ -14,17 +14,17 @@ import org.testng.asserts.SoftAssert;
 
 import coreUtilities.testutils.ApiHelper;
 import coreUtilities.utils.FileOperations;
-import pages.DemoRegisterL2;
+import pages.FormManagement_L2_Pages;
 import pages.StartupPage;
 import testBase.AppTestBase;
 
-public class DemoAutomationRegisterL2 extends AppTestBase {
+public class FormManagement_L2_Testcases extends AppTestBase {
 	
 	Map<String, String> configData;
 	Map<String, String> loginCredentials;
 	String expectedDataFilePath = testDataFilePath+"expected_data.json";
 	StartupPage startupPage;
-	DemoRegisterL2 RegisterPageInstance;
+	FormManagement_L2_Pages RegisterPageInstance;
 	
 	
 	@Parameters({"browser", "environment"})
@@ -43,7 +43,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 	@Test(priority = 1, groups = {"sanity"}, description="Go to SwitchTo Tab clickOn Window and then click on Click")
 	public void switchToWindow() throws Exception {
 		softAssert = new SoftAssert();		
-		RegisterPageInstance = new DemoRegisterL2(driver);
+		RegisterPageInstance = new FormManagement_L2_Pages(driver);
 		//Note the below todo and method validateTheLoginPage() has to be implemented by the implementor
 		softAssert.assertEquals("todo", RegisterPageInstance.goToSwitchToTabCliOnWindowThenClickOnTab());
 	}	
@@ -51,7 +51,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 	@Test(priority = 2, groups = {"sanity"}, description="Go to SwitchTo Tab clickOn Window and then click on Open new separate window and click")
 	public void goToSwitchToWindowClickOnOpenNewSeparateWindowAndClick() throws Exception {
 		softAssert = new SoftAssert();		
-		RegisterPageInstance = new DemoRegisterL2(driver);
+		RegisterPageInstance = new FormManagement_L2_Pages(driver);
 		//Note the below todo and method validateTheLoginPage() has to be implemented by the implementor
 		softAssert.assertEquals("todo", RegisterPageInstance.goToSwitchToWindowClickOnOpenNewSeparateWindowAndClick());
 	}	
@@ -59,7 +59,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 	@Test(priority = 3, groups = {"sanity"}, description="Go to SwitchTo Tab clickOn Window and then click on Open separate multiple window and click")
 	public void goToSwitchToWindowClickOnOpenSeparateMultipleWindowAndClick() throws Exception {
 		softAssert = new SoftAssert();		
-		RegisterPageInstance = new DemoRegisterL2(driver);
+		RegisterPageInstance = new FormManagement_L2_Pages(driver);
 		//Note the below todo and method validateTheLoginPage() has to be implemented by the implementor
 		softAssert.assertEquals("todo", RegisterPageInstance.goToSwitchToWindowClickOnOpenSeparateMultipleWindowAndClick());
 	}	
@@ -67,7 +67,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 	@Test(priority = 4, groups = {"sanity"}, description="Go to SwitchTo Tab clickOn Frame and then pass the value in textbox")
 	public void goToSwitchToFrameClickOnClickOnSingleFrameAndPassTheValueInTextbox() throws Exception {
 		softAssert = new SoftAssert();		
-		RegisterPageInstance = new DemoRegisterL2(driver);
+		RegisterPageInstance = new FormManagement_L2_Pages(driver);
 		//Note the below todo and method validateTheLoginPage() has to be implemented by the implementor
 		softAssert.assertEquals("todo", RegisterPageInstance.goToSwitchToFrameClickOnClickOnSingleFrameAndPassTheValueInTextbox());
 	}	
@@ -75,7 +75,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 	@Test(priority = 5, groups = {"sanity"}, description="Go to SwitchTo Tab clickOn Frame, then clickOn iframeWithANIframe and then pass the value in textbox")
 	public void goToSwitchToFrameClickOnClickOniframeWithAnIframeAndPassTheValueInTextbox() throws Exception {
 		softAssert = new SoftAssert();		
-		RegisterPageInstance = new DemoRegisterL2(driver);
+		RegisterPageInstance = new FormManagement_L2_Pages(driver);
 		//Note the below todo and method validateTheLoginPage() has to be implemented by the implementor
 		softAssert.assertEquals("todo", RegisterPageInstance.goToSwitchToFrameClickOnClickOniframeWithAnIframeAndPassTheValueInTextbox());
 	}	
@@ -83,7 +83,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 	@Test(priority = 6, groups = {"sanity"}, description="Go to Widget Tab clickOn Accordio and Select Any Groups And Fetch the Data")
 	public void goToWidgetsTabclickOnAccordioSelectAnyGroupsAndFetchData() throws Exception {
 		softAssert = new SoftAssert();		
-		RegisterPageInstance = new DemoRegisterL2(driver);
+		RegisterPageInstance = new FormManagement_L2_Pages(driver);
 		//Note the below todo and method validateTheLoginPage() has to be implemented by the implementor
 		softAssert.assertEquals("todo", RegisterPageInstance.goToWidgetsTabclickOnAccordioSelectAnyGroupsAndFetchData());
 	}	
@@ -91,7 +91,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 	@Test(priority = 7, groups = {"sanity"}, description="Go to Widget Tab clickOn Auto complete and pass the value")
 	public void goToWidgetsTabclickOnAUtoCompleteAndPassValue() throws Exception {
 		softAssert = new SoftAssert();		
-		RegisterPageInstance = new DemoRegisterL2(driver);
+		RegisterPageInstance = new FormManagement_L2_Pages(driver);
 		//Note the below todo and method validateTheLoginPage() has to be implemented by the implementor
 		softAssert.assertEquals("todo", RegisterPageInstance.goToWidgetsTabclickOnAUtoCompleteAndPassValue());
 	}
@@ -99,7 +99,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 	@Test(priority = 8, groups = {"sanity"}, description="Go to Widget Tab clickOn slider and perform Maximize and Minimize action")
 	public void goToWidgetsTabclickOnSliderAndPerformMaximizeMinimize() throws Exception {
 		softAssert = new SoftAssert();		
-		RegisterPageInstance = new DemoRegisterL2(driver);
+		RegisterPageInstance = new FormManagement_L2_Pages(driver);
 		//Note the below todo and method validateTheLoginPage() has to be implemented by the implementor
 		softAssert.assertEquals("todo", RegisterPageInstance.goToWidgetsTabclickOnSliderAndPerformMaximizeMinimize());
 	}	
@@ -107,7 +107,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 	@Test(priority = 9, groups = {"sanity"}, description="Go to Interaction Tab clickOn Drag and drop then click on static and perform DragAndDrop Action ")
 	public void goToInterActionTabclickOnDragAndDropClickOnStaticAndPerfomDragAndDropAction() throws Exception {
 		softAssert = new SoftAssert();		
-		RegisterPageInstance = new DemoRegisterL2(driver);
+		RegisterPageInstance = new FormManagement_L2_Pages(driver);
 		//Note the below todo and method validateTheLoginPage() has to be implemented by the implementor
 		softAssert.assertEquals("todo", RegisterPageInstance.goToInterActionTabclickOnDragAndDropClickOnStaticAndPerfomDragAndDropAction());
 	}	
@@ -115,7 +115,7 @@ public class DemoAutomationRegisterL2 extends AppTestBase {
 	@Test(priority = 10, groups = {"sanity"}, description="Go to Interaction Tab clickOn Drag and drop then click on dynamic and perform DragAndDrop Action")
 	public void goToInterActionTabclickOnDragAndDropClickOnDynamicAndPerfomDragAndDropAction() throws Exception {
 		softAssert = new SoftAssert();		
-		RegisterPageInstance = new DemoRegisterL2(driver);
+		RegisterPageInstance = new FormManagement_L2_Pages(driver);
 		//Note the below todo and method validateTheLoginPage() has to be implemented by the implementor
 		softAssert.assertEquals("todo", RegisterPageInstance.goToInterActionTabclickOnDragAndDropClickOnDynamicAndPerfomDragAndDropAction());
 	}	

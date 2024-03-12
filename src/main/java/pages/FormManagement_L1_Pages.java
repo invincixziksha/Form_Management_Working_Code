@@ -15,7 +15,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
 
-public class DemoRegisterPages extends StartupPage 
+public class FormManagement_L1_Pages extends StartupPage 
 {
 	public SoftAssert softAssert;
 	//WebElemet Declaration
@@ -68,7 +68,7 @@ public class DemoRegisterPages extends StartupPage
 	
 
 	//constructor Initialization
-	public DemoRegisterPages(WebDriver driver) 
+	public FormManagement_L1_Pages(WebDriver driver) 
 	{
 		super(driver);
 
