@@ -26,8 +26,6 @@ public class FormManagement_L1_TestCases extends AppTestBase {
 	String expectedDataFilePath = testDataFilePath+"expected_data.json";
 	StartupPage startupPage;
 	FormManagement_L1_Pages RegisterPageInstance;
-	String numberToBeEntered="nayaksurya50@gmail.com";
-	String ExpectedErrorMessage="The phone number you're trying to verify was recently used to verify a different account.  Please try a different number.";
 	LocatorsFactory LocatorsFactoryInstance=new LocatorsFactory(driver);
 	
 	@Parameters({"browser", "environment"})
@@ -43,13 +41,13 @@ public class FormManagement_L1_TestCases extends AppTestBase {
 		startupPage = new StartupPage(driver);
 	}
 	
+	
 	@Test(priority = 1, groups = {"sanity"}, description="Navigate to the URL and Validate the Home Page")
 	public void DemoRegisterAutomation() throws Exception {
 		RegisterPageInstance = new FormManagement_L1_Pages(driver);
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "HomePage_Title");
 		Assert.assertEquals(RegisterPageInstance.validateTitleOfHomePage(), expectedData.get("pageTitle"));
-		Assert.assertTrue(LocatorsFactoryInstance.getswitchToNavigationMenu(driver).isDisplayed(), "switch to menu is not present in the current page, Please check manually");
-
+		Assert.assertTrue(LocatorsFactoryInstance.registerNavigationMenu(driver).isDisplayed(), "switch to menu is not present in the current page, Please check manually");
 	}	
 	
 	@Test(priority = 2, groups = {"sanity"}, description="Click SwitchTo  Alert Link. and Validate if control is navigated to new page")
@@ -66,27 +64,24 @@ public class FormManagement_L1_TestCases extends AppTestBase {
 	public void handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup() throws Exception {
 		RegisterPageInstance = new FormManagement_L1_Pages(driver);
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "alerts_message");
-		Assert.assertEquals(RegisterPageInstance.handleAlertsPopupandValidateTheTextInsideAnAlertsPopup(), expectedData.get("alertsMessage"));
-		Assert.assertTrue(LocatorsFactoryInstance.getAlertWithOkButton(driver).isDisplayed(), "switch to menu is not present in the current page, Please check manually");	
-		
+		Assert.assertEquals(RegisterPageInstance.handleAlertsPopupValidateAnAlertsPopup(), expectedData.get("alertsMessage"));
+		Assert.assertTrue(LocatorsFactoryInstance.getAlertWithOkButton(driver).isDisplayed(), "switch to menu is not present in the current page, Please check manually");		
 	}	
+	
 	@Test(priority = 4, groups = {"sanity"}, description="Click on Register menu option to navigate to Register page. and  Fill the form with data provided in excel sheet.")
 	public void clickOnRegisterLinkAndFillTheForms() throws Exception {
-
 		RegisterPageInstance = new FormManagement_L1_Pages(driver);
 		String expectedDataFilePath = testDataFilePath+"expected_data.json";
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "userdetails");
 		Assert.assertTrue(RegisterPageInstance.clickOnRegisterLinkandFillTheForms(expectedData), "Register button is not present, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.firstNameTextboxIsPresent(driver).isDisplayed(), "First name text field is not present in the current page, Please check manually");
-		
 	}		
 	
 	@Test(priority = 5, groups = {"sanity"}, description="Click on the country dropdown and Select each country option one by one.")
 	public void clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne() throws Exception {
 		RegisterPageInstance = new FormManagement_L1_Pages(driver);
-		Assert.assertTrue(RegisterPageInstance.clickOnSelectCountryDropdownAndSelectEachCountryOneByOne(), "Register button is not present, please check manually");	
+		Assert.assertTrue(RegisterPageInstance.clickOnSelectCountryAndSelectEachCountry(), "Register button is not present, please check manually");	
 		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
-
 	}	
 	
 	@Test(priority = 6, groups = {"sanity"}, description="Click on the country dropdown and Validate if each country option is selectable from the dropdown.")
@@ -94,49 +89,48 @@ public class FormManagement_L1_TestCases extends AppTestBase {
 		RegisterPageInstance = new FormManagement_L1_Pages(driver);
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "userdetails");
 		Assert.assertEquals(RegisterPageInstance.selectAustraliaInCountryDrpdownAndValidate(), expectedData.get("CountryName"));
-		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown is not present in the current page, Please check manually");
+		Assert.assertTrue(LocatorsFactoryInstance.refreshButton(driver).isDisplayed(), "Country dropdown is not present in the current page, Please check manually");
 	}	
 	
 	@Test(priority = 7, groups = {"sanity"}, description=" Check and uncheck each hobby checkbox and Validate that the checkboxes are responding correctly to user interaction, allowing selection and deselection.")
 	public void checkAndUncheckEachCheckBoxAndValidateThatCheckBox() throws Exception {
 		RegisterPageInstance = new FormManagement_L1_Pages(driver);
-		Assert.assertTrue(RegisterPageInstance.checkandUncheckEachCheckBoxAndValidateThatCheckBox(), "Hobbies check box is not present, please check manually");	
-		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
-
+		Assert.assertTrue(RegisterPageInstance.checkUncheckCheckBoxAndValidateThatCheckBox(), "Hobbies check box is not present, please check manually");	
+		Assert.assertTrue(LocatorsFactoryInstance.hockeyCheckBox(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
 	}	
 	
 	@Test(priority = 8, groups = {"sanity"}, description="Select each radio button option for gender and Validate that only one radio button option should be selectable at a time.")
 	public void selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect() throws Exception {
 		RegisterPageInstance = new FormManagement_L1_Pages(driver);
-		Assert.assertTrue(RegisterPageInstance.selecteachRadioButtonvalidateEachRadioButtonoptionShouldBeSelectableAttime(), "Radio buttons are  not present, please check manually");	
-		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
-
+		Assert.assertTrue(RegisterPageInstance.selectRadioButtonvalidateRadioButtonOptionIsSelectable(), "Radio buttons are  not present, please check manually");	
+		Assert.assertTrue(LocatorsFactoryInstance.maleradioButton(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
 	}	
 	
 	@Test(priority = 9, groups = {"sanity"}, description="Select different dates from the Date Of Birth fields")
 	public void selectMonthYearDateInDropdown() throws Exception {
 		RegisterPageInstance = new FormManagement_L1_Pages(driver);
 		Assert.assertTrue(RegisterPageInstance.selectYearMonthDate(), "date,month and year dropdowns are  not present, please check manually");	
-		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
-	}	
+		Assert.assertTrue(LocatorsFactoryInstance.selectYearDropdown(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
+	}
 	
 	@Test(priority = 10, groups = {"sanity"}, description="Click on the image upload button and Choose an image file from the file system")
 	public void uploadAImage() throws Exception {
 		RegisterPageInstance = new FormManagement_L1_Pages(driver);
-		Assert.assertTrue(RegisterPageInstance.clickOnChooseFilUploadButtonAndUploadImage(null), "file upload failed, please check manually");	
+		String expectedDataFilePath = testDataFilePath+"expected_data.json";
+		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "PathOfTheImage");
+		Assert.assertTrue(RegisterPageInstance.clickOnChooseFilUploadButtonAndUploadImage(expectedData.get("uploadImageFilePath")), "file upload failed, please check manually");	
 		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
 	}	
 
-	
 	@Test(priority = 11, groups = {"sanity"}, description="click On Register And Fill FirstNameTextbox lastNameTextbox addressInputAreabox emailAddress Textbox And submitButton")
-	public void clickOnRegisterAndFillFirstNameTextboxlastnameTextboxaddressInputAreaboxemailAddressTextboxAndsubmitButton() throws Exception {
+	public void fillTheDetailsAndClickOnTheSubmitButton() throws Exception {
 		RegisterPageInstance = new FormManagement_L1_Pages(driver);
 		String expectedDataFilePath = testDataFilePath+"expected_data.json";
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "userdetails");
-		Assert.assertTrue(RegisterPageInstance.clickOnRegisterAndFillFirstNameTextboxlastNameTextboxaddressInputAreaboxemailAddressTextboxAndsubmitButton(expectedData), "Register button is not present, please check manually");
+		Assert.assertTrue(RegisterPageInstance.filltheDetailsAndClickOnTheSubmitButton(expectedData), "Register button is not present, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
 	}	
-	
+
 
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {

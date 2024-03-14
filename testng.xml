@@ -15,7 +15,7 @@
 		<parameter name="browser" value="chrome" />
 		<parameter name="environment" value="dev" />
 		<classes>
-			<class name="testcases.FormManagement_L2_Testcases" />
+			<class name="testcases.FormManagement_L1_TestCases" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

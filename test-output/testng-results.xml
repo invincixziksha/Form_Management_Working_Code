@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-14T11:50:53 IST" name="Suite" finished-at="2024-03-14T11:51:19 IST" duration-ms="26120">
+  <suite started-at="2024-03-14T17:44:49 IST" name="Suite" finished-at="2024-03-14T17:45:59 IST" duration-ms="70597">
     <groups>
       <group name="sanity">
-        <method signature="FormManagement_L2_Testcases.VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields()[pri:4, instance:testcases.FormManagement_L2_Testcases@1f9d6c7b]" name="VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields" class="testcases.FormManagement_L2_Testcases"/>
+        <method signature="FormManagement_L1_TestCases.DemoRegisterAutomation()[pri:1, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="DemoRegisterAutomation" class="testcases.FormManagement_L1_TestCases"/>
+        <method signature="FormManagement_L1_TestCases.clickOnSwitchToAlertAndValidateTitlePage()[pri:2, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="clickOnSwitchToAlertAndValidateTitlePage" class="testcases.FormManagement_L1_TestCases"/>
+        <method signature="FormManagement_L1_TestCases.handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup()[pri:3, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup" class="testcases.FormManagement_L1_TestCases"/>
+        <method signature="FormManagement_L1_TestCases.clickOnRegisterLinkAndFillTheForms()[pri:4, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="clickOnRegisterLinkAndFillTheForms" class="testcases.FormManagement_L1_TestCases"/>
+        <method signature="FormManagement_L1_TestCases.clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne()[pri:5, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne" class="testcases.FormManagement_L1_TestCases"/>
+        <method signature="FormManagement_L1_TestCases.clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown()[pri:6, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown" class="testcases.FormManagement_L1_TestCases"/>
+        <method signature="FormManagement_L1_TestCases.checkAndUncheckEachCheckBoxAndValidateThatCheckBox()[pri:7, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="checkAndUncheckEachCheckBoxAndValidateThatCheckBox" class="testcases.FormManagement_L1_TestCases"/>
+        <method signature="FormManagement_L1_TestCases.selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect()[pri:8, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect" class="testcases.FormManagement_L1_TestCases"/>
+        <method signature="FormManagement_L1_TestCases.selectMonthYearDateInDropdown()[pri:9, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="selectMonthYearDateInDropdown" class="testcases.FormManagement_L1_TestCases"/>
+        <method signature="FormManagement_L1_TestCases.uploadAImage()[pri:10, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="uploadAImage" class="testcases.FormManagement_L1_TestCases"/>
+        <method signature="FormManagement_L1_TestCases.fillTheDetailsAndClickOnTheSubmitButton()[pri:11, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="fillTheDetailsAndClickOnTheSubmitButton" class="testcases.FormManagement_L1_TestCases"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2024-03-14T11:50:53 IST" name="Test" finished-at="2024-03-14T11:51:19 IST" duration-ms="26120">
-      <class name="testcases.FormManagement_L2_Testcases">
-        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.FormManagement_L2_Testcases@1f9d6c7b]" started-at="2024-03-14T11:50:53 IST" name="initBrowser" finished-at="2024-03-14T11:51:11 IST" duration-ms="17419" status="PASS">
+    <test started-at="2024-03-14T17:44:49 IST" name="Test" finished-at="2024-03-14T17:45:59 IST" duration-ms="70597">
+      <class name="testcases.FormManagement_L1_TestCases">
+        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:44:49 IST" name="initBrowser" finished-at="2024-03-14T17:45:03 IST" duration-ms="13920" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,15 +36,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method signature="VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields()[pri:4, instance:testcases.FormManagement_L2_Testcases@1f9d6c7b]" started-at="2024-03-14T11:51:11 IST" name="VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields" description="Verify that clicking on refresh button its refreshing all the entered data in all the fields" finished-at="2024-03-14T11:51:19 IST" duration-ms="8044" status="PASS">
+        <test-method signature="DemoRegisterAutomation()[pri:1, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:45:03 IST" name="DemoRegisterAutomation" description="Navigate to the URL and Validate the Home Page" finished-at="2024-03-14T17:45:03 IST" duration-ms="120" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.FormManagement_L2_Testcases@1f9d6c7b]" started-at="2024-03-14T11:51:19 IST" name="tearDown" finished-at="2024-03-14T11:51:19 IST" duration-ms="540" status="PASS">
+        </test-method> <!-- DemoRegisterAutomation -->
+        <test-method signature="clickOnSwitchToAlertAndValidateTitlePage()[pri:2, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:45:03 IST" name="clickOnSwitchToAlertAndValidateTitlePage" description="Click SwitchTo  Alert Link. and Validate if control is navigated to new page" finished-at="2024-03-14T17:45:05 IST" duration-ms="2552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnSwitchToAlertAndValidateTitlePage -->
+        <test-method signature="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup()[pri:3, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:45:05 IST" name="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup" description="Click on button to display the alert box and Validate if alert popup is shown." finished-at="2024-03-14T17:45:11 IST" duration-ms="5227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup -->
+        <test-method signature="clickOnRegisterLinkAndFillTheForms()[pri:4, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:45:11 IST" name="clickOnRegisterLinkAndFillTheForms" description="Click on Register menu option to navigate to Register page. and  Fill the form with data provided in excel sheet." finished-at="2024-03-14T17:45:21 IST" duration-ms="9801" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnRegisterLinkAndFillTheForms -->
+        <test-method signature="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne()[pri:5, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:45:21 IST" name="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne" description="Click on the country dropdown and Select each country option one by one." finished-at="2024-03-14T17:45:27 IST" duration-ms="6727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne -->
+        <test-method signature="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown()[pri:6, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:45:27 IST" name="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown" description="Click on the country dropdown and Validate if each country option is selectable from the dropdown." finished-at="2024-03-14T17:45:30 IST" duration-ms="2399" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown -->
+        <test-method signature="checkAndUncheckEachCheckBoxAndValidateThatCheckBox()[pri:7, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:45:30 IST" name="checkAndUncheckEachCheckBoxAndValidateThatCheckBox" description=" Check and uncheck each hobby checkbox and Validate that the checkboxes are responding correctly to user interaction, allowing selection and deselection." finished-at="2024-03-14T17:45:31 IST" duration-ms="950" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAndUncheckEachCheckBoxAndValidateThatCheckBox -->
+        <test-method signature="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect()[pri:8, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:45:31 IST" name="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect" description="Select each radio button option for gender and Validate that only one radio button option should be selectable at a time." finished-at="2024-03-14T17:45:35 IST" duration-ms="4384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect -->
+        <test-method signature="selectMonthYearDateInDropdown()[pri:9, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:45:35 IST" name="selectMonthYearDateInDropdown" description="Select different dates from the Date Of Birth fields" finished-at="2024-03-14T17:45:36 IST" duration-ms="514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectMonthYearDateInDropdown -->
+        <test-method signature="uploadAImage()[pri:10, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:45:36 IST" name="uploadAImage" description="Click on the image upload button and Choose an image file from the file system" finished-at="2024-03-14T17:45:51 IST" duration-ms="15480" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadAImage -->
+        <test-method signature="fillTheDetailsAndClickOnTheSubmitButton()[pri:11, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:45:51 IST" name="fillTheDetailsAndClickOnTheSubmitButton" description="click On Register And Fill FirstNameTextbox lastNameTextbox addressInputAreabox emailAddress Textbox And submitButton" finished-at="2024-03-14T17:45:59 IST" duration-ms="8011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillTheDetailsAndClickOnTheSubmitButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-14T17:45:59 IST" name="tearDown" finished-at="2024-03-14T17:45:59 IST" duration-ms="391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.FormManagement_L2_Testcases -->
+      </class> <!-- testcases.FormManagement_L1_TestCases -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

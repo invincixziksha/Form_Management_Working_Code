@@ -14,19 +14,13 @@
       </run>
     </groups>
     <classes>
-      <class name="testcases.DemoAutomationRegisterL2">
+      <class name="testcases.FormManagement_L1_TestCases">
         <methods>
-<<<<<<< HEAD
-          <include name="initBrowser"/>
           <include name="tearDown"/>
-          <include name="goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage"/>
-=======
-          <include name="tearDown"/>
-          <include name="filltheRegisterFormAndValidateErrorMessage"/>
           <include name="initBrowser"/>
->>>>>>> 44295083523510cbd3885f4ebb1fbbf57172b296
+          <include name="uploadAImage"/>
         </methods>
-      </class> <!-- testcases.DemoAutomationRegisterL2 -->
+      </class> <!-- testcases.FormManagement_L1_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

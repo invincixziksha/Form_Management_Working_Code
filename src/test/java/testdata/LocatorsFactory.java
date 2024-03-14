@@ -16,13 +16,13 @@ public class LocatorsFactory extends StartupPage {
 	By firstNameTextbox = By.xpath("//input[@placeholder='First Name']"); 
 	By emailTextField = By.xpath("//input[@placeholder=\"E mail\"]"); 
 	By switchToNavigationMenu = By.xpath("//a[contains(text() , 'SwitchTo')]"); 
-	
-	
 	By shopIconButton = By.xpath("//a[.='Shop']"); 
-
-	By alertWithOk = By.xpath("//a[.='Alert with OK ']"); 
-
+	By alertWithOk = By.xpath("//a[.='Alert with OK ']");
 	By countryDropdown = By.xpath("//select[@id='countries']"); 
+	By registerNavigationMenu = By.xpath("//a[contains(text(), 'Register')]"); 
+	By hockeyCheckBox = By.xpath("//input[@value='Hockey']"); 
+	By maleRadioButton = By.xpath("//input[@value='Male']");
+	By selectYear = By.xpath("//select[@placeholder='Year']");
 
 	public LocatorsFactory(WebDriver driver) {
 		super(driver);
@@ -38,6 +38,11 @@ public class LocatorsFactory extends StartupPage {
 	public WebElement refreshButton(WebDriver driver) {
 		WebElement refreshButtonWebElement = driver.findElement(refreshButton);
 		return refreshButtonWebElement; 
+	}
+	
+	public WebElement registerNavigationMenu(WebDriver driver) {
+		WebElement registerNavigationMenuWebElement = driver.findElement(registerNavigationMenu);
+		return registerNavigationMenuWebElement; 
 	}
 
 	public WebElement logoIcon(WebDriver driver) {
@@ -78,6 +83,21 @@ public class LocatorsFactory extends StartupPage {
 	public WebElement countryDropdownIsPresent(WebDriver driver) {
 		WebElement countryDropdownWebElement = driver.findElement(countryDropdown);
         return countryDropdownWebElement;
+    }
+	
+	public WebElement hockeyCheckBox(WebDriver driver) {
+		WebElement hockeyCheckBoxWebElement = driver.findElement(hockeyCheckBox);
+        return hockeyCheckBoxWebElement;
+    }
+	
+	public WebElement maleradioButton(WebDriver driver) {
+		WebElement maleRadioButtonWebElement = driver.findElement(maleRadioButton);
+        return maleRadioButtonWebElement;
+    }
+	
+	public WebElement selectYearDropdown(WebDriver driver) {
+		WebElement selectYearDropdownWebElement = driver.findElement(selectYear);
+        return selectYearDropdownWebElement;
     }
 
 }

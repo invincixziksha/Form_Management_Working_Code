@@ -127,6 +127,19 @@ public class CommonEvents
 		return flag;
 	}
 	
+	
+	/**
+	 * This method is responsible to find the element from the DOM. 
+	 * If found then it'll return true else it'll return false.
+	 * In this case it'll try to find the element in the entire DOM, so it might consume sometime
+	 * 
+	 * @param by
+	 * @return boolean
+	 */
+	public WebElement findElement(By locator) {
+        return driver.findElement(locator);
+    }
+	
 	/**
 	 * This method is responsible to find the element from the DOM. 
 	 * If found then it'll return true else it'll return false.
@@ -897,6 +910,7 @@ public class CommonEvents
 	 */
 	public CommonEvents click(By by)
 	{
+		System.out.println("before click on the file upload");
 		getWebElement(by).click();
 		return new CommonEvents(driver);
 	}
