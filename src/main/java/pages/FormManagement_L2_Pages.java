@@ -173,12 +173,11 @@ public class FormManagement_L2_Pages extends StartupPage
 		try {
 			// TODO Auto-generated method stub
 			commonEvents.click(refreshButton);
-			if(commonEvents.isEmpty(firstNameTextbox)&&
-					commonEvents.isEmpty(lastNameTextbox)&&
-					commonEvents.isEmpty(addressInputAreabox)&&
-					commonEvents.isEmpty(emailAddressTextbox)&& 
-					commonEvents.isEmpty(phoneNumberTextbox)
-					) {
+			if(commonEvents.getAttribute(firstNameTextbox, "value").isEmpty() &&
+					commonEvents.getAttribute(lastNameTextbox, "value").isEmpty() &&
+					commonEvents.getAttribute(addressInputAreabox, "value").isEmpty() &&
+					commonEvents.getAttribute(emailAddressTextbox, "value").isEmpty() &&
+					commonEvents.getAttribute(phoneNumberTextbox, "value").isEmpty()) {
 				return true;
 			}
 
