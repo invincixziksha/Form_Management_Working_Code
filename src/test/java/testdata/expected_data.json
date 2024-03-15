@@ -48,6 +48,7 @@
 	},
 	"PathOfTheImage":{
 		"imagePath":"\\testImage\\uploadImage.png",
-		"uploadImageFilePath":"D:\\Ziksha_Automation_Workspace\\Form_Management_Working_Code\\testImage\\uploadImage.png"
+		"uploadImageFilePath":"D:\\Ziksha_Automation_Workspace\\Form_Management_Working_Code\\testImage\\uploadImage.png",
+		"uploadImageName":"uploadImage.png"
 	}
 }

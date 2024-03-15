@@ -14,13 +14,13 @@
       </run>
     </groups>
     <classes>
-      <class name="testcases.FormManagement_L2_Testcases">
+      <class name="testcases.FormManagement_L1_TestCases">
         <methods>
-          <include name="initBrowser"/>
           <include name="tearDown"/>
-          <include name="verifyTitleOfMultipleWindows"/>
+          <include name="initBrowser"/>
+          <include name="uploadAImage"/>
         </methods>
-      </class> <!-- testcases.FormManagement_L2_Testcases -->
+      </class> <!-- testcases.FormManagement_L1_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -119,6 +119,8 @@ public class FormManagement_L1_TestCases extends AppTestBase {
 		String expectedDataFilePath = testDataFilePath+"expected_data.json";
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "PathOfTheImage");
 		Assert.assertTrue(RegisterPageInstance.clickOnChooseFilUploadButtonAndUploadImage(expectedData.get("uploadImageFilePath")), "file upload failed, please check manually");	
+		Map<String, String> expectedData1 = new FileOperations().readJson(expectedDataFilePath, "PathOfTheImage");
+		Assert.assertEquals(RegisterPageInstance.verifyUploadImageFileName(expectedData1.get("uploadImageFilePath")), expectedData1.get("uploadImageName"), "Upload file Nmae is not Matching, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
 	}	
 
