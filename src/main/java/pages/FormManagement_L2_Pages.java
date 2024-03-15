@@ -1,10 +1,12 @@
 package pages;
 
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class FormManagement_L2_Pages extends StartupPage 
 {
@@ -16,9 +18,9 @@ public class FormManagement_L2_Pages extends StartupPage
 	By phoneNumberTextbox = By.xpath("//input[@type='tel']"); 
 	By maleRadioButton = By.xpath("//input[@value='Male']"); 
 	By feMaleRadioButton = By.xpath("//input[@value='FeMale']"); 
-	By CricketCheckBox = By.xpath("//input[@value='Cricket']"); 
-	By MoviesCheckBox = By.xpath("//input[@value='Movies']"); 
-	By HockeyCheckBox = By.xpath("//input[@value='Hockey']"); 
+	By cricketCheckBox = By.xpath("//input[@value='Cricket']"); 
+	By moviesCheckBox = By.xpath("//input[@value='Movies']"); 
+	By hockeyCheckBox = By.xpath("//input[@value='Hockey']"); 
 	By languageDropdown = By.xpath("//div[@id='msdd']"); 
 	By selectEnglish = By.xpath("//a[contains(text(), 'English')]"); 
 	By selectCountryIndia = By.xpath("//li[contains(text(), 'India')]"); 
@@ -54,6 +56,8 @@ public class FormManagement_L2_Pages extends StartupPage
 	By staticButton = By.xpath("//a[.='Static ']");
 	By sourceLocationseleniumLogo = By.xpath("//img[@id='node']");
 	By targetLocationseleniumLogo = By.xpath("//div[@id='droparea']");
+	By seleniumWebDriver = By.xpath("//h4[contains(text(), 'Selenium WebDriver')]");
+	By seleniumDragAndDropImage = By.xpath("(//img[contains(@src, 'selenium.png')])[1]");
 	
 
 
@@ -78,15 +82,17 @@ public class FormManagement_L2_Pages extends StartupPage
 	 * @author : yaksha
 	 */
 	public String goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage() throws Exception {
+		String titleOfCurrentPage = "";
 		try {
 			commonEvents.click(homeIcon);
 			commonEvents.click(signInButton);
-			String titleOfThePage = driver.getTitle();
-			System.out.println("Title of this Page:"+titleOfThePage);
-			return titleOfThePage;
+			titleOfCurrentPage = commonEvents.getTitle();
+			System.out.println("Title of this Page:"+titleOfCurrentPage);
+//			return titleOfThePage;
 		}catch(Exception e) {
 			throw e;
 		}
+		return titleOfCurrentPage;
 	}
 	
 	
@@ -98,17 +104,19 @@ public class FormManagement_L2_Pages extends StartupPage
 	 * @author : yaksha
 	 */
 	public String goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle() throws Exception {
+		String titleOfCurrentPage = "";
 		try {
 			driver.navigate().back();
 		    commonEvents.click(skipSignInButton);
-		    String titleOfThePage = driver.getTitle();
-			System.out.println("Title of this Page:"+titleOfThePage);
-			return titleOfThePage;
+		    titleOfCurrentPage = commonEvents.getTitle();
+			System.out.println("Title of this Page:"+ titleOfCurrentPage);
+		
 		}catch(Exception e) {
 			throw e;
 		}
+		return titleOfCurrentPage;
 	}
-	
+
 	
 	/**@Test3
 	 * about this method thenFillTheRegisterFormAndClickOnRefreshButton() 
@@ -118,6 +126,7 @@ public class FormManagement_L2_Pages extends StartupPage
 	 * @author : yaksha
 	 */
 		public boolean thenFillTheRegisterFormAndClickOnRefreshButton(Map<String, String> expectedData) throws Exception {
+			Boolean isFilled = false;
 			try {
 				commonEvents.click(registerNavigationMenu);
 			    commonEvents.sendKeys(firstNameTextbox,expectedData.get("firstName"));	
@@ -125,11 +134,15 @@ public class FormManagement_L2_Pages extends StartupPage
 				commonEvents.sendKeys(addressInputAreabox,expectedData.get("adds"));	
 				commonEvents.sendKeys(emailAddressTextbox,expectedData.get("emaiI"));	
 				commonEvents.sendKeys(phoneNumberTextbox,expectedData.get("phoneNo"));
+				
+				if(commonEvents.getAttribute(firstNameTextbox, "value").equals(expectedData.get("firstName"))) {
+					isFilled = true;
+				}
 
 			}catch(Exception e) {
 				throw e;
 			}
-			return true;		
+			return isFilled;		
 	}
 
 	/**@Test4.1
@@ -140,24 +153,31 @@ public class FormManagement_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public boolean fillTheForms(Map<String, String> expectedData) throws Exception {
+		Boolean isFilled = false; 
 		try {
+			commonEvents.click(refreshButton);
 			commonEvents.sendKeys(firstNameTextbox,expectedData.get("firstName"));	
 			commonEvents.sendKeys(lastNameTextbox,expectedData.get("lastName"));
 			commonEvents.sendKeys(addressInputAreabox,expectedData.get("adds"));
 			commonEvents.sendKeys(emailAddressTextbox,expectedData.get("emaiI"));
 			commonEvents.sendKeys(phoneNumberTextbox,expectedData.get("phoneNo"));
 			commonEvents.click(maleRadioButton);
-			commonEvents.click(MoviesCheckBox);
+			commonEvents.click(moviesCheckBox);
 			commonEvents.selectByVisibleText(skillsDropdown, expectedData.get("skills") );
 			commonEvents.selectByVisibleText(selectYear, expectedData.get("year") );
 			commonEvents.selectByVisibleText(selectMonth, expectedData.get("month") );
 			commonEvents.selectByVisibleText(selectDate, expectedData.get("day") );
 			commonEvents.sendKeys(password,expectedData.get("password"));	
 			commonEvents.sendKeys(confirmPassword,expectedData.get("confirmPassword"));
+			
+			if(commonEvents.getAttribute(firstNameTextbox, "value").equals(expectedData.get("firstName"))) {
+				isFilled = true;
+			}
+			
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return isFilled;	
 	}
 
 
@@ -170,6 +190,7 @@ public class FormManagement_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public Boolean VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields() throws Exception {
+		Boolean isEmptyFilled = false;
 		try {
 			// TODO Auto-generated method stub
 			commonEvents.click(refreshButton);
@@ -178,13 +199,15 @@ public class FormManagement_L2_Pages extends StartupPage
 					commonEvents.getAttribute(addressInputAreabox, "value").isEmpty() &&
 					commonEvents.getAttribute(emailAddressTextbox, "value").isEmpty() &&
 					commonEvents.getAttribute(phoneNumberTextbox, "value").isEmpty()) {
-				return true;
+				
+				if(commonEvents.getAttribute(firstNameTextbox, "value").equals("")) {
+					isEmptyFilled = true;
+				}
 			}
-
 		}catch(Exception e) {
 			throw e;
 		}
-		return false;
+		return isEmptyFilled;	
 	}
 
 	/** @test5
@@ -195,6 +218,7 @@ public class FormManagement_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public String verifyTitleOfNewTab() throws Exception {
+		String currentPageTitle = "";
 		commonEvents.click(switchToNavigationMenu);
 		commonEvents.click(window);
 		commonEvents.click(clickLink);
@@ -207,15 +231,14 @@ public class FormManagement_L2_Pages extends StartupPage
 					break;   
 				}
 			}
-			String currentPageTitle	=  driver.getTitle();
+			currentPageTitle	=  commonEvents.getTitle();
 			System.out.println("Title of the New tab Page : " + currentPageTitle );
 			driver.close();
 			driver.switchTo().window(mainWindowHandle);
-			return currentPageTitle;    
 		}catch(Exception e) {
 			throw e;
 		}
-
+		return currentPageTitle; 
 	}
 
 	/** @test6
@@ -226,6 +249,7 @@ public class FormManagement_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public String verifyTitleOfNewWindows() throws Exception {
+		String currentPageTitle = "";
 		commonEvents.click(switchToNavigationMenu);
 		commonEvents.click(window);
 		commonEvents.click(openNewSeparateWindowLink);
@@ -239,14 +263,14 @@ public class FormManagement_L2_Pages extends StartupPage
 					break;
 				}
 			}
-			String currentPageTitle	=  driver.getTitle();
+			currentPageTitle	=  commonEvents.getTitle();
 			System.out.println("Title of the New Windows Page : " + currentPageTitle );
 			driver.close();
 			driver.switchTo().window(mainWindowHandle);
-			return currentPageTitle;        
 		}catch(Exception e) {
 			throw e;
 		}
+		return currentPageTitle;
 	}
 
 	/** @test7
@@ -257,6 +281,7 @@ public class FormManagement_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public String verifyTitleOfMultipleWindows() throws Exception {
+		String currentPageTitle = "";
 		commonEvents.click(switchToNavigationMenu);
 		commonEvents.click(window);
 		commonEvents.click(openMultipleSeparateWindowLink);
@@ -270,14 +295,14 @@ public class FormManagement_L2_Pages extends StartupPage
 					break;
 				}
 			}
-			String currentPageTitle	=  driver.getTitle();
+			currentPageTitle	=  commonEvents.getTitle();
 			System.out.println("Title of the Multiple windows Page : " + currentPageTitle );
 			driver.close();
-			driver.switchTo().window(mainWindowHandle);
-			return currentPageTitle;        
+			driver.switchTo().window(mainWindowHandle);       
 		}catch(Exception e) {
 			throw e;
 		}
+		return currentPageTitle;
 	}
 	
 	/**@Test8
@@ -289,15 +314,16 @@ public class FormManagement_L2_Pages extends StartupPage
 	 */	
 	
 	public String gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage() throws Exception {
+		String currentPageTitle = "";
 		try {
 			commonEvents.click(interactioNavigationMenu);
 			commonEvents.click(dragAndDrop);
 			commonEvents.click(staticButton);
-			String title=driver.getTitle();		
-			return title;
+			currentPageTitle =commonEvents.getTitle();		
 		}catch(Exception e) {
 			throw e;
 		}
+		return currentPageTitle;
 	}
 	
 	
@@ -311,6 +337,7 @@ public class FormManagement_L2_Pages extends StartupPage
 	 */	
 	
 	public boolean selecttheSeleniumLogoAndPerformDragAndDropOperation() throws Exception {
+		Boolean isDragged = false;
 		try {
 	          commonEvents.dragAndDrop(sourceLocationseleniumLogo,
 					targetLocationseleniumLogo,
@@ -318,10 +345,15 @@ public class FormManagement_L2_Pages extends StartupPage
                     "targetElementName",
                     "pageName");
 			Thread.sleep(5000);
+			
+			if (commonEvents.isDisplayed(seleniumDragAndDropImage)) {
+				isDragged = true;
+			}
+			
 		}catch(Exception e) {
 			throw e;
 		}
-		return true;
+		return isDragged;
 	}
 
 	/** @test10
@@ -332,16 +364,16 @@ public class FormManagement_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public String verifyTextofAnyToggleActionInsideOfAccordionListMenu() throws Exception {
-
+		String textOfPannelTwoBody = "";
 		try {
 			commonEvents.click(widgetsMenu);
 			commonEvents.click(accordionList);
 			commonEvents.click(accordionListToggle);
-			String textOfPannelTwoBody = commonEvents.getText(accordionListTogglePannel2Text);
-			return textOfPannelTwoBody;        
+			textOfPannelTwoBody = commonEvents.getText(accordionListTogglePannel2Text);
 		}catch(Exception e) {
 			throw e;
 		}
+		return textOfPannelTwoBody;  
 	}
 
 	/** @test11
@@ -352,17 +384,17 @@ public class FormManagement_L2_Pages extends StartupPage
 	 * @author : Yaksha
 	 */
 	public boolean verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue(Map<String, String> expectedData) throws Exception {
+		Boolean isFilled = false; 
 		try {
 			commonEvents.click(widgetsMenu);
 			commonEvents.click(autoCompleteLink);
 			if(commonEvents.isDisplayed(autoCompleteTextBox)) {
-				commonEvents.sendKeys(autoCompleteTextBox,expectedData.get("autoCompleteTextBoxValue"));	
+				commonEvents.sendKeys(autoCompleteTextBox,expectedData.get("autoCompleteTextBoxValue"));
+				isFilled = true;
 			}
-			return true;
 		}catch(Exception e) {
 			throw e;
 		}
+		return isFilled;
 	}
-
-
 }

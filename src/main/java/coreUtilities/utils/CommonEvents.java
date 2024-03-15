@@ -910,7 +910,6 @@ public class CommonEvents
 	 */
 	public CommonEvents click(By by)
 	{
-		System.out.println("before click on the file upload");
 		getWebElement(by).click();
 		return new CommonEvents(driver);
 	}
@@ -2757,7 +2756,7 @@ public class CommonEvents
 	{
 		if(windowId!=null)
 			driver.switchTo()
-					.window(windowId);
+					.window(windowId); 
 		else
 			throw new Exception("Window id should not be a null value");
 		return new CommonEvents(driver);
@@ -4466,7 +4465,7 @@ public class CommonEvents
 	}
 	public CommonEvents fileUpload(String pathOfTheFile ) throws AWTException
 	{
-		StringSelection selectFile=new StringSelection(pathOfTheFile);
+		StringSelection selectFile=new StringSelection(pathOfTheFile); 
 //		internally copy the file
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selectFile, null);
 		Robot robot=new Robot();

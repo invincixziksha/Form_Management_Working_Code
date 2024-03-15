@@ -124,7 +124,7 @@ public class FormManagement_L1_TestCases extends AppTestBase {
 
 	@Test(priority = 11, groups = {"sanity"}, description="click On Register And Fill FirstNameTextbox lastNameTextbox addressInputAreabox emailAddress Textbox And submitButton")
 	public void fillTheDetailsAndClickOnTheSubmitButton() throws Exception {
-		RegisterPageInstance = new FormManagement_L1_Pages(driver);
+		RegisterPageInstance = new FormManagement_L1_Pages(driver); 
 		String expectedDataFilePath = testDataFilePath+"expected_data.json";
 		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "userdetails");
 		Assert.assertTrue(RegisterPageInstance.filltheDetailsAndClickOnTheSubmitButton(expectedData), "Register button is not present, please check manually");
