@@ -50,7 +50,6 @@ public class FormManagement_L1_TestCases extends AppTestBase {
 		Assert.assertTrue(LocatorsFactoryInstance.registerNavigationMenu(driver).isDisplayed(), "switch to menu is not present in the current page, Please check manually");
 	}	
 	
-	
 	@Test(priority = 2, groups = {"sanity"}, description="Click SwitchTo  Alert Link. and Validate if control is navigated to new page")
 	public void clickOnSwitchToAlertAndValidateTitlePage() throws Exception {
 		
