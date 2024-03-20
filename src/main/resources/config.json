@@ -1,11 +1,11 @@
 {
 	"dev":{
-		"url":"https://demo.automationtesting.in/Register.html",
+		"url":"https://www.moneycontrol.com/",
 		"pageloadtimeout":"90",
 		"implicitwaittime":"30"
 	},
 	"prod":{
-		"url":"https://demo.automationtesting.in/Register.html",
+		"url":"https://www.moneycontrol.com/",
 		"pageloadtimeout":"90",
 		"implicitwaittime":"30"
 	}
