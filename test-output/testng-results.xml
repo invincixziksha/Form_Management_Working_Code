@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-18T11:31:04 IST" name="Suite" finished-at="2024-03-18T11:31:37 IST" duration-ms="33249">
+  <suite started-at="2024-03-20T15:33:32 IST" name="Suite" finished-at="2024-03-20T15:33:43 IST" duration-ms="11611">
     <groups>
       <group name="sanity">
-        <method signature="FormManagement_L2_Testcases.goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage()[pri:1, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage" class="testcases.FormManagement_L2_Testcases"/>
-        <method signature="FormManagement_L2_Testcases.goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle()[pri:2, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle" class="testcases.FormManagement_L2_Testcases"/>
-        <method signature="FormManagement_L2_Testcases.thenFillTheRegisterFormAndClickOnRefreshButton()[pri:3, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="thenFillTheRegisterFormAndClickOnRefreshButton" class="testcases.FormManagement_L2_Testcases"/>
-        <method signature="FormManagement_L2_Testcases.VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields()[pri:4, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields" class="testcases.FormManagement_L2_Testcases"/>
-        <method signature="FormManagement_L2_Testcases.verifyTitleOfNewTab()[pri:5, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="verifyTitleOfNewTab" class="testcases.FormManagement_L2_Testcases"/>
-        <method signature="FormManagement_L2_Testcases.verifyTitleOfNewWindows()[pri:6, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="verifyTitleOfNewWindows" class="testcases.FormManagement_L2_Testcases"/>
-        <method signature="FormManagement_L2_Testcases.verifyTitleOfMultipleWindows()[pri:7, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="verifyTitleOfMultipleWindows" class="testcases.FormManagement_L2_Testcases"/>
-        <method signature="FormManagement_L2_Testcases.gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage()[pri:8, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage" class="testcases.FormManagement_L2_Testcases"/>
-        <method signature="FormManagement_L2_Testcases.selecttheSeleniumLogoAndPerformDragAndDropOperation()[pri:9, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="selecttheSeleniumLogoAndPerformDragAndDropOperation" class="testcases.FormManagement_L2_Testcases"/>
-        <method signature="FormManagement_L2_Testcases.verifyTextofAnyToggleActionInsideOfAccordionListMenu()[pri:10, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="verifyTextofAnyToggleActionInsideOfAccordionListMenu" class="testcases.FormManagement_L2_Testcases"/>
-        <method signature="FormManagement_L2_Testcases.verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue()[pri:11, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue" class="testcases.FormManagement_L2_Testcases"/>
+        <method signature="MoneyControl_L1_TestCases.DemoRegisterAutomation()[pri:1, instance:testcases.MoneyControl_L1_TestCases@7555b920]" name="DemoRegisterAutomation" class="testcases.MoneyControl_L1_TestCases"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2024-03-18T11:31:04 IST" name="Test" finished-at="2024-03-18T11:31:37 IST" duration-ms="33249">
-      <class name="testcases.FormManagement_L2_Testcases">
-        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:04 IST" name="initBrowser" finished-at="2024-03-18T11:31:09 IST" duration-ms="5324" status="PASS">
+    <test started-at="2024-03-20T15:33:32 IST" name="Test" finished-at="2024-03-20T15:33:43 IST" duration-ms="11611">
+      <class name="testcases.MoneyControl_L1_TestCases">
+        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.MoneyControl_L1_TestCases@7555b920]" started-at="2024-03-20T15:33:32 IST" name="initBrowser" finished-at="2024-03-20T15:33:43 IST" duration-ms="11138" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -36,55 +26,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method signature="goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage()[pri:1, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:09 IST" name="goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage" description="Go to home, then click on Sign-In button and validate the title of the Sign-In page" finished-at="2024-03-18T11:31:10 IST" duration-ms="860" status="PASS">
+        <test-method signature="DemoRegisterAutomation()[pri:1, instance:testcases.MoneyControl_L1_TestCases@7555b920]" started-at="2024-03-20T15:33:43 IST" name="DemoRegisterAutomation" description="Navigate to the URL and Validate the Home Page" finished-at="2024-03-20T15:33:43 IST" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage -->
-        <test-method signature="goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle()[pri:2, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:10 IST" name="goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle" description="go back to index page and click on Skip signIn button and validate the Register page title." finished-at="2024-03-18T11:31:10 IST" duration-ms="324" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle -->
-        <test-method signature="thenFillTheRegisterFormAndClickOnRefreshButton()[pri:3, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:10 IST" name="thenFillTheRegisterFormAndClickOnRefreshButton" description="Then fill the register form and click on Refresh button" finished-at="2024-03-18T11:31:11 IST" duration-ms="811" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- thenFillTheRegisterFormAndClickOnRefreshButton -->
-        <test-method signature="VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields()[pri:4, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:11 IST" name="VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields" description="Verify that clicking on refresh button its refreshing all the entered data in all the fields" finished-at="2024-03-18T11:31:16 IST" duration-ms="5349" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields -->
-        <test-method signature="verifyTitleOfNewTab()[pri:5, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:16 IST" name="verifyTitleOfNewTab" description="Go to SwitchTo Tab clickOn Window and then click on &quot;Click&quot; and validate the title of new tab page" finished-at="2024-03-18T11:31:21 IST" duration-ms="4096" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitleOfNewTab -->
-        <test-method signature="verifyTitleOfNewWindows()[pri:6, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:21 IST" name="verifyTitleOfNewWindows" description="Go to SwitchTo Tab clickOn Window and then click on Open new separate window and click and validate the title of new windows page" finished-at="2024-03-18T11:31:23 IST" duration-ms="2361" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitleOfNewWindows -->
-        <test-method signature="verifyTitleOfMultipleWindows()[pri:7, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:23 IST" name="verifyTitleOfMultipleWindows" description="Go to SwitchTo Tab clickOn Window and then click on Open separate multiple window and click" finished-at="2024-03-18T11:31:26 IST" duration-ms="2665" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitleOfMultipleWindows -->
-        <test-method signature="gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage()[pri:8, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:26 IST" name="gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage" description="Go to Interaction clickOn Drag and Drop and click on static validate the title of the Drag and Drop page." finished-at="2024-03-18T11:31:27 IST" duration-ms="1733" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage -->
-        <test-method signature="selecttheSeleniumLogoAndPerformDragAndDropOperation()[pri:9, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:27 IST" name="selecttheSeleniumLogoAndPerformDragAndDropOperation" description="Select the selenium logo and perform Drag and Drop operation" finished-at="2024-03-18T11:31:33 IST" duration-ms="5666" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selecttheSeleniumLogoAndPerformDragAndDropOperation -->
-        <test-method signature="verifyTextofAnyToggleActionInsideOfAccordionListMenu()[pri:10, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:33 IST" name="verifyTextofAnyToggleActionInsideOfAccordionListMenu" description="Go to Widget Tab clickOn Accordio and Select Any Groups And Fetch the Data" finished-at="2024-03-18T11:31:35 IST" duration-ms="1650" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTextofAnyToggleActionInsideOfAccordionListMenu -->
-        <test-method signature="verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue()[pri:11, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:35 IST" name="verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue" description="Go to Widget Tab clickOn Auto complete and verify the auto complete textbox is present or not then pass the value" finished-at="2024-03-18T11:31:37 IST" duration-ms="1933" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:37 IST" name="tearDown" finished-at="2024-03-18T11:31:37 IST" duration-ms="356" status="PASS">
+        </test-method> <!-- DemoRegisterAutomation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.MoneyControl_L1_TestCases@7555b920]" started-at="2024-03-20T15:33:43 IST" name="tearDown" finished-at="2024-03-20T15:33:43 IST" duration-ms="351" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.FormManagement_L2_Testcases -->
+      </class> <!-- testcases.MoneyControl_L1_TestCases -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
