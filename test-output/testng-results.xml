@@ -2,25 +2,25 @@
 <testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-15T20:37:53 IST" name="Suite" finished-at="2024-03-15T20:39:01 IST" duration-ms="68651">
+  <suite started-at="2024-03-18T11:31:04 IST" name="Suite" finished-at="2024-03-18T11:31:37 IST" duration-ms="33249">
     <groups>
       <group name="sanity">
-        <method signature="FormManagement_L1_TestCases.DemoRegisterAutomation()[pri:1, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="DemoRegisterAutomation" class="testcases.FormManagement_L1_TestCases"/>
-        <method signature="FormManagement_L1_TestCases.clickOnSwitchToAlertAndValidateTitlePage()[pri:2, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="clickOnSwitchToAlertAndValidateTitlePage" class="testcases.FormManagement_L1_TestCases"/>
-        <method signature="FormManagement_L1_TestCases.handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup()[pri:3, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup" class="testcases.FormManagement_L1_TestCases"/>
-        <method signature="FormManagement_L1_TestCases.clickOnRegisterLinkAndFillTheForms()[pri:4, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="clickOnRegisterLinkAndFillTheForms" class="testcases.FormManagement_L1_TestCases"/>
-        <method signature="FormManagement_L1_TestCases.clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne()[pri:5, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne" class="testcases.FormManagement_L1_TestCases"/>
-        <method signature="FormManagement_L1_TestCases.clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown()[pri:6, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown" class="testcases.FormManagement_L1_TestCases"/>
-        <method signature="FormManagement_L1_TestCases.checkAndUncheckEachCheckBoxAndValidateThatCheckBox()[pri:7, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="checkAndUncheckEachCheckBoxAndValidateThatCheckBox" class="testcases.FormManagement_L1_TestCases"/>
-        <method signature="FormManagement_L1_TestCases.selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect()[pri:8, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect" class="testcases.FormManagement_L1_TestCases"/>
-        <method signature="FormManagement_L1_TestCases.selectMonthYearDateInDropdown()[pri:9, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="selectMonthYearDateInDropdown" class="testcases.FormManagement_L1_TestCases"/>
-        <method signature="FormManagement_L1_TestCases.uploadAImage()[pri:10, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="uploadAImage" class="testcases.FormManagement_L1_TestCases"/>
-        <method signature="FormManagement_L1_TestCases.fillTheDetailsAndClickOnTheSubmitButton()[pri:11, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" name="fillTheDetailsAndClickOnTheSubmitButton" class="testcases.FormManagement_L1_TestCases"/>
+        <method signature="FormManagement_L2_Testcases.goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage()[pri:1, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage" class="testcases.FormManagement_L2_Testcases"/>
+        <method signature="FormManagement_L2_Testcases.goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle()[pri:2, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle" class="testcases.FormManagement_L2_Testcases"/>
+        <method signature="FormManagement_L2_Testcases.thenFillTheRegisterFormAndClickOnRefreshButton()[pri:3, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="thenFillTheRegisterFormAndClickOnRefreshButton" class="testcases.FormManagement_L2_Testcases"/>
+        <method signature="FormManagement_L2_Testcases.VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields()[pri:4, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields" class="testcases.FormManagement_L2_Testcases"/>
+        <method signature="FormManagement_L2_Testcases.verifyTitleOfNewTab()[pri:5, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="verifyTitleOfNewTab" class="testcases.FormManagement_L2_Testcases"/>
+        <method signature="FormManagement_L2_Testcases.verifyTitleOfNewWindows()[pri:6, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="verifyTitleOfNewWindows" class="testcases.FormManagement_L2_Testcases"/>
+        <method signature="FormManagement_L2_Testcases.verifyTitleOfMultipleWindows()[pri:7, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="verifyTitleOfMultipleWindows" class="testcases.FormManagement_L2_Testcases"/>
+        <method signature="FormManagement_L2_Testcases.gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage()[pri:8, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage" class="testcases.FormManagement_L2_Testcases"/>
+        <method signature="FormManagement_L2_Testcases.selecttheSeleniumLogoAndPerformDragAndDropOperation()[pri:9, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="selecttheSeleniumLogoAndPerformDragAndDropOperation" class="testcases.FormManagement_L2_Testcases"/>
+        <method signature="FormManagement_L2_Testcases.verifyTextofAnyToggleActionInsideOfAccordionListMenu()[pri:10, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="verifyTextofAnyToggleActionInsideOfAccordionListMenu" class="testcases.FormManagement_L2_Testcases"/>
+        <method signature="FormManagement_L2_Testcases.verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue()[pri:11, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" name="verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue" class="testcases.FormManagement_L2_Testcases"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2024-03-15T20:37:53 IST" name="Test" finished-at="2024-03-15T20:39:01 IST" duration-ms="68651">
-      <class name="testcases.FormManagement_L1_TestCases">
-        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:37:53 IST" name="initBrowser" finished-at="2024-03-15T20:38:05 IST" duration-ms="12439" status="PASS">
+    <test started-at="2024-03-18T11:31:04 IST" name="Test" finished-at="2024-03-18T11:31:37 IST" duration-ms="33249">
+      <class name="testcases.FormManagement_L2_Testcases">
+        <test-method is-config="true" signature="initBrowser(java.lang.String,java.lang.String)[pri:0, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:04 IST" name="initBrowser" finished-at="2024-03-18T11:31:09 IST" duration-ms="5324" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -36,55 +36,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initBrowser -->
-        <test-method signature="DemoRegisterAutomation()[pri:1, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:38:05 IST" name="DemoRegisterAutomation" description="Navigate to the URL and Validate the Home Page" finished-at="2024-03-15T20:38:05 IST" duration-ms="67" status="PASS">
+        <test-method signature="goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage()[pri:1, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:09 IST" name="goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage" description="Go to home, then click on Sign-In button and validate the title of the Sign-In page" finished-at="2024-03-18T11:31:10 IST" duration-ms="860" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DemoRegisterAutomation -->
-        <test-method signature="clickOnSwitchToAlertAndValidateTitlePage()[pri:2, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:38:05 IST" name="clickOnSwitchToAlertAndValidateTitlePage" description="Click SwitchTo  Alert Link. and Validate if control is navigated to new page" finished-at="2024-03-15T20:38:08 IST" duration-ms="2297" status="PASS">
+        </test-method> <!-- goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage -->
+        <test-method signature="goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle()[pri:2, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:10 IST" name="goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle" description="go back to index page and click on Skip signIn button and validate the Register page title." finished-at="2024-03-18T11:31:10 IST" duration-ms="324" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnSwitchToAlertAndValidateTitlePage -->
-        <test-method signature="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup()[pri:3, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:38:08 IST" name="handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup" description="Click on button to display the alert box and Validate if alert popup is shown." finished-at="2024-03-15T20:38:13 IST" duration-ms="5122" status="PASS">
+        </test-method> <!-- goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle -->
+        <test-method signature="thenFillTheRegisterFormAndClickOnRefreshButton()[pri:3, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:10 IST" name="thenFillTheRegisterFormAndClickOnRefreshButton" description="Then fill the register form and click on Refresh button" finished-at="2024-03-18T11:31:11 IST" duration-ms="811" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- handleAlertsPopupAndValidateTheTextInsideAnAlertsPopup -->
-        <test-method signature="clickOnRegisterLinkAndFillTheForms()[pri:4, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:38:13 IST" name="clickOnRegisterLinkAndFillTheForms" description="Click on Register menu option to navigate to Register page. and  Fill the form with data provided in excel sheet." finished-at="2024-03-15T20:38:21 IST" duration-ms="8083" status="PASS">
+        </test-method> <!-- thenFillTheRegisterFormAndClickOnRefreshButton -->
+        <test-method signature="VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields()[pri:4, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:11 IST" name="VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields" description="Verify that clicking on refresh button its refreshing all the entered data in all the fields" finished-at="2024-03-18T11:31:16 IST" duration-ms="5349" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnRegisterLinkAndFillTheForms -->
-        <test-method signature="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne()[pri:5, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:38:21 IST" name="clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne" description="Click on the country dropdown and Select each country option one by one." finished-at="2024-03-15T20:38:29 IST" duration-ms="8018" status="PASS">
+        </test-method> <!-- VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields -->
+        <test-method signature="verifyTitleOfNewTab()[pri:5, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:16 IST" name="verifyTitleOfNewTab" description="Go to SwitchTo Tab clickOn Window and then click on &quot;Click&quot; and validate the title of new tab page" finished-at="2024-03-18T11:31:21 IST" duration-ms="4096" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnCountryDropDownAndSelectEachCountryOptionsOneByOne -->
-        <test-method signature="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown()[pri:6, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:38:29 IST" name="clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown" description="Click on the country dropdown and Validate if each country option is selectable from the dropdown." finished-at="2024-03-15T20:38:32 IST" duration-ms="3132" status="PASS">
+        </test-method> <!-- verifyTitleOfNewTab -->
+        <test-method signature="verifyTitleOfNewWindows()[pri:6, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:21 IST" name="verifyTitleOfNewWindows" description="Go to SwitchTo Tab clickOn Window and then click on Open new separate window and click and validate the title of new windows page" finished-at="2024-03-18T11:31:23 IST" duration-ms="2361" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnCountryDropDownAndValidateEachCountryOptionsIsSelectableOneByOneFromDropdown -->
-        <test-method signature="checkAndUncheckEachCheckBoxAndValidateThatCheckBox()[pri:7, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:38:32 IST" name="checkAndUncheckEachCheckBoxAndValidateThatCheckBox" description=" Check and uncheck each hobby checkbox and Validate that the checkboxes are responding correctly to user interaction, allowing selection and deselection." finished-at="2024-03-15T20:38:32 IST" duration-ms="468" status="PASS">
+        </test-method> <!-- verifyTitleOfNewWindows -->
+        <test-method signature="verifyTitleOfMultipleWindows()[pri:7, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:23 IST" name="verifyTitleOfMultipleWindows" description="Go to SwitchTo Tab clickOn Window and then click on Open separate multiple window and click" finished-at="2024-03-18T11:31:26 IST" duration-ms="2665" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkAndUncheckEachCheckBoxAndValidateThatCheckBox -->
-        <test-method signature="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect()[pri:8, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:38:32 IST" name="selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect" description="Select each radio button option for gender and Validate that only one radio button option should be selectable at a time." finished-at="2024-03-15T20:38:37 IST" duration-ms="4217" status="PASS">
+        </test-method> <!-- verifyTitleOfMultipleWindows -->
+        <test-method signature="gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage()[pri:8, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:26 IST" name="gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage" description="Go to Interaction clickOn Drag and Drop and click on static validate the title of the Drag and Drop page." finished-at="2024-03-18T11:31:27 IST" duration-ms="1733" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectEachRadioOptionsForGenderValidateThatOnlyOneRadioButtonShouldBeSelect -->
-        <test-method signature="selectMonthYearDateInDropdown()[pri:9, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:38:37 IST" name="selectMonthYearDateInDropdown" description="Select different dates from the Date Of Birth fields" finished-at="2024-03-15T20:38:37 IST" duration-ms="375" status="PASS">
+        </test-method> <!-- gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage -->
+        <test-method signature="selecttheSeleniumLogoAndPerformDragAndDropOperation()[pri:9, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:27 IST" name="selecttheSeleniumLogoAndPerformDragAndDropOperation" description="Select the selenium logo and perform Drag and Drop operation" finished-at="2024-03-18T11:31:33 IST" duration-ms="5666" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectMonthYearDateInDropdown -->
-        <test-method signature="uploadAImage()[pri:10, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:38:37 IST" name="uploadAImage" description="Click on the image upload button and Choose an image file from the file system" finished-at="2024-03-15T20:38:52 IST" duration-ms="15329" status="PASS">
+        </test-method> <!-- selecttheSeleniumLogoAndPerformDragAndDropOperation -->
+        <test-method signature="verifyTextofAnyToggleActionInsideOfAccordionListMenu()[pri:10, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:33 IST" name="verifyTextofAnyToggleActionInsideOfAccordionListMenu" description="Go to Widget Tab clickOn Accordio and Select Any Groups And Fetch the Data" finished-at="2024-03-18T11:31:35 IST" duration-ms="1650" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- uploadAImage -->
-        <test-method signature="fillTheDetailsAndClickOnTheSubmitButton()[pri:11, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:38:52 IST" name="fillTheDetailsAndClickOnTheSubmitButton" description="click On Register And Fill FirstNameTextbox lastNameTextbox addressInputAreabox emailAddress Textbox And submitButton" finished-at="2024-03-15T20:39:01 IST" duration-ms="8835" status="PASS">
+        </test-method> <!-- verifyTextofAnyToggleActionInsideOfAccordionListMenu -->
+        <test-method signature="verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue()[pri:11, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:35 IST" name="verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue" description="Go to Widget Tab clickOn Auto complete and verify the auto complete textbox is present or not then pass the value" finished-at="2024-03-18T11:31:37 IST" duration-ms="1933" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fillTheDetailsAndClickOnTheSubmitButton -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.FormManagement_L1_TestCases@2f19f2aa]" started-at="2024-03-15T20:39:01 IST" name="tearDown" finished-at="2024-03-15T20:39:01 IST" duration-ms="191" status="PASS">
+        </test-method> <!-- verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.FormManagement_L2_Testcases@2f19f2aa]" started-at="2024-03-18T11:31:37 IST" name="tearDown" finished-at="2024-03-18T11:31:37 IST" duration-ms="356" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.FormManagement_L1_TestCases -->
+      </class> <!-- testcases.FormManagement_L2_Testcases -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
