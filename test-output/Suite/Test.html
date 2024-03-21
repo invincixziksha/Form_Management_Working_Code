@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>11/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Mar 18 11:31:04 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>33 seconds (33249 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>sanity </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.FormManagement_L2_Testcases.selecttheSeleniumLogoAndPerformDragAndDropOperation()'><b>selecttheSeleniumLogoAndPerformDragAndDropOperation</b><br>Test class: testcases.FormManagement_L2_Testcases<br>Test method: Select the selenium logo and perform Drag and Drop operation</td>
+<td></td>
+<td>5</td>
+<td>testcases.FormManagement_L2_Testcases@2f19f2aa</td></tr>
+<tr>
+<td title='testcases.FormManagement_L2_Testcases.verifyTitleOfMultipleWindows()'><b>verifyTitleOfMultipleWindows</b><br>Test class: testcases.FormManagement_L2_Testcases<br>Test method: Go to SwitchTo Tab clickOn Window and then click on Open separate multiple window and click</td>
+<td></td>
+<td>2</td>
+<td>testcases.FormManagement_L2_Testcases@2f19f2aa</td></tr>
+<tr>
+<td title='testcases.FormManagement_L2_Testcases.goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage()'><b>goTohomeThenClickOnSignInButtOnValidateTitleOfTheSignInPage</b><br>Test class: testcases.FormManagement_L2_Testcases<br>Test method: Go to home, then click on Sign-In button and validate the title of the Sign-In page</td>
+<td></td>
+<td>0</td>
+<td>testcases.FormManagement_L2_Testcases@2f19f2aa</td></tr>
+<tr>
+<td title='testcases.FormManagement_L2_Testcases.verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue()'><b>verifyAutoCompleteTextBoxIsPresentOrNotAndPassThevalue</b><br>Test class: testcases.FormManagement_L2_Testcases<br>Test method: Go to Widget Tab clickOn Auto complete and verify the auto complete textbox is present or not then pass the value</td>
+<td></td>
+<td>1</td>
+<td>testcases.FormManagement_L2_Testcases@2f19f2aa</td></tr>
+<tr>
+<td title='testcases.FormManagement_L2_Testcases.thenFillTheRegisterFormAndClickOnRefreshButton()'><b>thenFillTheRegisterFormAndClickOnRefreshButton</b><br>Test class: testcases.FormManagement_L2_Testcases<br>Test method: Then fill the register form and click on Refresh button</td>
+<td></td>
+<td>0</td>
+<td>testcases.FormManagement_L2_Testcases@2f19f2aa</td></tr>
+<tr>
+<td title='testcases.FormManagement_L2_Testcases.verifyTextofAnyToggleActionInsideOfAccordionListMenu()'><b>verifyTextofAnyToggleActionInsideOfAccordionListMenu</b><br>Test class: testcases.FormManagement_L2_Testcases<br>Test method: Go to Widget Tab clickOn Accordio and Select Any Groups And Fetch the Data</td>
+<td></td>
+<td>1</td>
+<td>testcases.FormManagement_L2_Testcases@2f19f2aa</td></tr>
+<tr>
+<td title='testcases.FormManagement_L2_Testcases.goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle()'><b>goBackToIndexPageclickonSkipSignInButtonAndValidateTheRegisterPageTitle</b><br>Test class: testcases.FormManagement_L2_Testcases<br>Test method: go back to index page and click on Skip signIn button and validate the Register page title.</td>
+<td></td>
+<td>0</td>
+<td>testcases.FormManagement_L2_Testcases@2f19f2aa</td></tr>
+<tr>
+<td title='testcases.FormManagement_L2_Testcases.gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage()'><b>gotoInteractionTabclickOnDragandDropThenClickOnStaticThenValidateTitleOfThePage</b><br>Test class: testcases.FormManagement_L2_Testcases<br>Test method: Go to Interaction clickOn Drag and Drop and click on static validate the title of the Drag and Drop page.</td>
+<td></td>
+<td>1</td>
+<td>testcases.FormManagement_L2_Testcases@2f19f2aa</td></tr>
+<tr>
+<td title='testcases.FormManagement_L2_Testcases.VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields()'><b>VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields</b><br>Test class: testcases.FormManagement_L2_Testcases<br>Test method: Verify that clicking on refresh button its refreshing all the entered data in all the fields</td>
+<td></td>
+<td>5</td>
+<td>testcases.FormManagement_L2_Testcases@2f19f2aa</td></tr>
+<tr>
+<td title='testcases.FormManagement_L2_Testcases.verifyTitleOfNewWindows()'><b>verifyTitleOfNewWindows</b><br>Test class: testcases.FormManagement_L2_Testcases<br>Test method: Go to SwitchTo Tab clickOn Window and then click on Open new separate window and click and validate the title of new windows page</td>
+<td></td>
+<td>2</td>
+<td>testcases.FormManagement_L2_Testcases@2f19f2aa</td></tr>
+<tr>
+<td title='testcases.FormManagement_L2_Testcases.verifyTitleOfNewTab()'><b>verifyTitleOfNewTab</b><br>Test class: testcases.FormManagement_L2_Testcases<br>Test method: Go to SwitchTo Tab clickOn Window and then click on "Click" and validate the title of new tab page</td>
+<td></td>
+<td>4</td>
+<td>testcases.FormManagement_L2_Testcases@2f19f2aa</td></tr>
+</table><p>
+</body>
+</html>

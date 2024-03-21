@@ -1,7 +1,6 @@
 package pages;
 
 
-import java.io.File;
 import java.util.Map;
 
 import org.openqa.selenium.Alert;
@@ -357,35 +356,12 @@ public class FormManagement_L1_Pages extends StartupPage
 			 commonEvents.fileUpload(pathOfTheFile);
 			 Thread.sleep(5000); //waiting for the image to display by name
 			 isUploaded = true;
-			 
 		}catch(Exception e) {
 			throw e;
 		}
 		return isUploaded;
 	}
 	
-	/**@Test10.1
-	 * about this method clickOnChooseFilUploadButtonAndUploadImage() 
-	 * @param : String
-	 * @description : click on choose file button and upload the image
-	 * @return : boolean
-	 * @author : Yaksha
-	 */
-	public  String verifyUploadImageFileName(String pathOfTheFile) throws Exception {
-		 String fileName = "";
-		try {
-			 Thread.sleep(5000); //waiting for the image to display by name
-			 fileName = new File(pathOfTheFile).getName();
-			 System.out.println("name of the file " + fileName);
-//			 if(driver.getPageSource().contains(fileName)) {
-//			 }
-		}catch(Exception e) {
-			throw e;
-		}
-		return fileName;
-	}
-
-
 	/**@Test11
 	 * about this method filltheDetailsAndClickOnTheSubmitButton() 
 	 * @param : Map<String, String>
