@@ -116,9 +116,7 @@ public class FormManagement_L1_TestCases extends AppTestBase {
 	@Test(priority = 10, groups = {"sanity"}, description="Click on the image upload button and Choose an image file from the file system")
 	public void uploadAImage() throws Exception {
 		RegisterPageInstance = new FormManagement_L1_Pages(driver);
-		String expectedDataFilePath = testDataFilePath+"expected_data.json";
-		Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "PathOfTheImage");
-		Assert.assertTrue(RegisterPageInstance.clickOnChooseFilUploadButtonAndUploadImage(expectedData.get("uploadImageFilePath")), "file upload failed, please check manually");	
+		Assert.assertTrue(RegisterPageInstance.clickOnChooseFilUploadButtonAndUploadImage(System.getProperty("user.dir") + "\\testImage\\uploadImage.png"), "file upload failed, please check manually");	
 		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
 	}	
 
