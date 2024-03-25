@@ -4481,4 +4481,10 @@ public class CommonEvents
 
         return new CommonEvents(driver);
 	}
+	
+	public boolean compareImages(BufferedImage img1, BufferedImage img2) {
+        // Image comparison logic
+        // Example: Compare image dimensions and pixel values
+        return img1.getWidth() == img2.getWidth() && img1.getHeight() == img2.getHeight();
+    }
 }

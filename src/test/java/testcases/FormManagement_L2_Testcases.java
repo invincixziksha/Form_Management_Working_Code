@@ -71,7 +71,6 @@ public class FormManagement_L2_Testcases extends AppTestBase {
 	public void VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields() throws Exception {
 		RegisterPageInstance = new FormManagement_L2_Pages(driver);
 		Map<String, String> expectedData1 = new FileOperations().readJson(expectedDataFilePath, "userdetails");
-//		RegisterPageInstance.fillTheForms(expectedData1);
 		Assert.assertTrue(RegisterPageInstance.fillTheForms(expectedData1), "FirstName text box is not present, please check manually");
 		Assert.assertTrue(RegisterPageInstance.VerifyThatClickingOnRefreshButtonItsRefreshingAllTheEnteredDataInAllTheFields(), "Any of the elememt is not empty, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.refreshButton(driver).isDisplayed(), "login button is not present in the current page, Please check manually");

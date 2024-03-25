@@ -1,14 +1,23 @@
 package pages;
 
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.Map;
+
+import javax.imageio.ImageIO;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.asserts.SoftAssert;
+
+import coreUtilities.utils.CommonEvents;
 
 public class FormManagement_L1_Pages extends StartupPage 
 {
@@ -169,7 +178,7 @@ public class FormManagement_L1_Pages extends StartupPage
 			commonEvents.selectByValue(selectDate, "25");  
 			commonEvents.sendKeys(password,expectedData.get("password"));
 			commonEvents.sendKeys(confirmPassword,expectedData.get("confirmPassword"));	
-			
+
 			if(commonEvents.getAttribute(firstNameTextbox, "value").equals(expectedData.get("firstName"))) {
 				isFilled = true;
 			}
@@ -193,34 +202,34 @@ public class FormManagement_L1_Pages extends StartupPage
 			Thread.sleep(3000);
 			commonEvents.click(clickOnCountryDropdown);
 			commonEvents.click(selectCountryAustralia); 
-			
+
 			commonEvents.click(clickOnCountryDropdown);
 			commonEvents.click(selectCountryBangladesh); 
-			
+
 			commonEvents.click(clickOnCountryDropdown);
 			commonEvents.click(selectCountryDenmark);
-			
+
 			commonEvents.click(clickOnCountryDropdown);
 			commonEvents.click(selectCountryHongKong);
-			
+
 			commonEvents.click(clickOnCountryDropdown);
 			commonEvents.click(selectCountryIndia);
-			
+
 			commonEvents.click(clickOnCountryDropdown);
 			commonEvents.click(selectCountryJapan);
-			
+
 			commonEvents.click(clickOnCountryDropdown);
 			commonEvents.click(selectCountryNetherlands);
-			
+
 			commonEvents.click(clickOnCountryDropdown);
 			commonEvents.click(selectCountryNewZealand);
-			
+
 			commonEvents.click(clickOnCountryDropdown);
 			commonEvents.click(selectCountrySouthAfrica);
-			
+
 			commonEvents.click(clickOnCountryDropdown);
 			commonEvents.click(selectCountryUnitedStatesOfAmerica); 
-			
+
 			if(commonEvents.isDisplayed(clickOnCountryDropdown)) {
 				isFilled = true;
 			}
@@ -273,7 +282,7 @@ public class FormManagement_L1_Pages extends StartupPage
 			if(clickOnHockeyCheckBox.isSelected()) {
 				isHockeyCheckBoxSelected = true;
 			}
-			
+
 		}catch(Exception e) {
 			throw e;
 		}
@@ -349,19 +358,36 @@ public class FormManagement_L1_Pages extends StartupPage
 	public boolean clickOnChooseFilUploadButtonAndUploadImage(String pathOfTheFile) throws Exception {
 		boolean isUploaded = false;
 		try {
-			 Thread.sleep(5000);
-			 commonEvents.click(chooseFile);
-			 System.out.println("path of the file" + pathOfTheFile );
-			 Thread.sleep(5000);
-			 commonEvents.fileUpload(pathOfTheFile);
-			 Thread.sleep(5000); //waiting for the image to display by name
-			 isUploaded = true;
+			Thread.sleep(5000);
+			// Take a screenshot before upload
+			File screenshotBefore = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	
+			commonEvents.sendKeys(uploadImageFileName, pathOfTheFile);
+			Thread.sleep(8000); //waiting for the image to display by name
+			// Take a screenshot after upload
+			File screenshotAfter = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+
+			try {
+				BufferedImage imgBefore = ImageIO.read(screenshotBefore);
+				BufferedImage imgAfter = ImageIO.read(screenshotAfter);
+
+				if (commonEvents.compareImages(imgBefore, imgAfter)) {
+					System.out.println("Image uploaded successfully.");
+					isUploaded = true;
+				} else {
+					System.out.println("Image upload failed or no visible change detected.");
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
 		}catch(Exception e) {
 			throw e;
 		}
 		return isUploaded;
 	}
-	
+
+
 	/**@Test11
 	 * about this method filltheDetailsAndClickOnTheSubmitButton() 
 	 * @param : Map<String, String>

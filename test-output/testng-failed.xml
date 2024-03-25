@@ -18,7 +18,7 @@
         <methods>
           <include name="initBrowser"/>
           <include name="tearDown"/>
-          <include name="verifyTextofAnyToggleActionInsideOfAccordionListMenu"/>
+          <include name="verifyTitleOfMultipleWindows"/>
         </methods>
       </class> <!-- testcases.FormManagement_L2_Testcases -->
     </classes>
