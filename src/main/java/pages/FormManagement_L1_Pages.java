@@ -1,23 +1,14 @@
 package pages;
 
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.util.Map;
-
-import javax.imageio.ImageIO;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.asserts.SoftAssert;
-
-import coreUtilities.utils.CommonEvents;
 
 public class FormManagement_L1_Pages extends StartupPage 
 {
@@ -359,27 +350,27 @@ public class FormManagement_L1_Pages extends StartupPage
 		boolean isUploaded = false;
 		try {
 			Thread.sleep(5000);
-			// Take a screenshot before upload
-			File screenshotBefore = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	
+//			// Take a screenshot before upload
+//			File screenshotBefore = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	
 			commonEvents.sendKeys(uploadImageFileName, pathOfTheFile);
 			Thread.sleep(8000); //waiting for the image to display by name
-			// Take a screenshot after upload
-			File screenshotAfter = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//			// Take a screenshot after upload
+//			File screenshotAfter = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 
-			try {
-				BufferedImage imgBefore = ImageIO.read(screenshotBefore);
-				BufferedImage imgAfter = ImageIO.read(screenshotAfter);
-
-				if (commonEvents.compareImages(imgBefore, imgAfter)) {
-					System.out.println("Image uploaded successfully.");
+//			try {
+//				BufferedImage imgBefore = ImageIO.read(screenshotBefore);
+//				BufferedImage imgAfter = ImageIO.read(screenshotAfter);
+//
+//				if (commonEvents.compareImages(imgBefore, imgAfter)) {
+//					System.out.println("Image uploaded successfully.");
 					isUploaded = true;
-				} else {
-					System.out.println("Image upload failed or no visible change detected.");
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+//				} else {
+//					System.out.println("Image upload failed or no visible change detected.");
+//				}
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
 
 		}catch(Exception e) {
 			throw e;

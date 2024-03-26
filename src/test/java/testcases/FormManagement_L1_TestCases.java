@@ -2,8 +2,14 @@
 
 package testcases;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.Map;
 
+import javax.imageio.ImageIO;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -13,11 +19,13 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import coreUtilities.testutils.ApiHelper;
+import coreUtilities.utils.CommonEvents;
 import coreUtilities.utils.FileOperations;
 import pages.FormManagement_L1_Pages;
 import pages.StartupPage;
 import testBase.AppTestBase;
 import testdata.LocatorsFactory;
+
 
 public class FormManagement_L1_TestCases extends AppTestBase {
 	
@@ -26,6 +34,7 @@ public class FormManagement_L1_TestCases extends AppTestBase {
 	String expectedDataFilePath = testDataFilePath+"expected_data.json";
 	StartupPage startupPage;
 	FormManagement_L1_Pages RegisterPageInstance;
+	CommonEvents commonEvents;
 	LocatorsFactory LocatorsFactoryInstance=new LocatorsFactory(driver);
 	
 	@Parameters({"browser", "environment"})
@@ -40,7 +49,6 @@ public class FormManagement_L1_TestCases extends AppTestBase {
 		initialize(configData);
 		startupPage = new StartupPage(driver);
 	}
-	
 	
 	@Test(priority = 1, groups = {"sanity"}, description="Navigate to the URL and Validate the Home Page")
 	public void DemoRegisterAutomation() throws Exception {
@@ -116,7 +124,16 @@ public class FormManagement_L1_TestCases extends AppTestBase {
 	@Test(priority = 10, groups = {"sanity"}, description="Click on the image upload button and Choose an image file from the file system")
 	public void uploadAImage() throws Exception {
 		RegisterPageInstance = new FormManagement_L1_Pages(driver);
+		// Take a screenshot before upload
+		File screenshotBefore = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	
 		Assert.assertTrue(RegisterPageInstance.clickOnChooseFilUploadButtonAndUploadImage(System.getProperty("user.dir") + "\\testImage\\uploadImage.png"), "file upload failed, please check manually");	
+		// Take a screenshot after upload
+		File screenshotAfter = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		BufferedImage imgBefore = ImageIO.read(screenshotBefore);
+		BufferedImage imgAfter = ImageIO.read(screenshotAfter);
+		commonEvents = new CommonEvents(driver);
+		Assert.assertTrue(commonEvents.compareImages(imgBefore, imgAfter), "Image upload failed or no visible change detected.");
+		System.out.println("Image uploaded successfully.");
 		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
 	}	
 
@@ -128,7 +145,6 @@ public class FormManagement_L1_TestCases extends AppTestBase {
 		Assert.assertTrue(RegisterPageInstance.filltheDetailsAndClickOnTheSubmitButton(expectedData), "Register button is not present, please check manually");
 		Assert.assertTrue(LocatorsFactoryInstance.countryDropdownIsPresent(driver).isDisplayed(), "Country dropdown menu is not present in the current page, Please check manually");
 	}	
-
 
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
