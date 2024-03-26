@@ -350,28 +350,9 @@ public class FormManagement_L1_Pages extends StartupPage
 		boolean isUploaded = false;
 		try {
 			Thread.sleep(5000);
-//			// Take a screenshot before upload
-//			File screenshotBefore = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	
 			commonEvents.sendKeys(uploadImageFileName, pathOfTheFile);
 			Thread.sleep(8000); //waiting for the image to display by name
-//			// Take a screenshot after upload
-//			File screenshotAfter = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-
-//			try {
-//				BufferedImage imgBefore = ImageIO.read(screenshotBefore);
-//				BufferedImage imgAfter = ImageIO.read(screenshotAfter);
-//
-//				if (commonEvents.compareImages(imgBefore, imgAfter)) {
-//					System.out.println("Image uploaded successfully.");
-					isUploaded = true;
-//				} else {
-//					System.out.println("Image upload failed or no visible change detected.");
-//				}
-//			} catch (IOException e) {
-//				e.printStackTrace();
-//			}
-
+			isUploaded = true;
 		}catch(Exception e) {
 			throw e;
 		}
