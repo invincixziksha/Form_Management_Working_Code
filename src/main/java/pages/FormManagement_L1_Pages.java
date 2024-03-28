@@ -349,16 +349,15 @@ public class FormManagement_L1_Pages extends StartupPage
 	public boolean clickOnChooseFilUploadButtonAndUploadImage(String pathOfTheFile) throws Exception {
 		boolean isUploaded = false;
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			commonEvents.sendKeys(uploadImageFileName, pathOfTheFile);
-			Thread.sleep(8000); //waiting for the image to display by name
+			Thread.sleep(3000); //waiting for the image to display by name
 			isUploaded = true;
 		}catch(Exception e) {
 			throw e;
 		}
 		return isUploaded;
 	}
-
 
 	/**@Test11
 	 * about this method filltheDetailsAndClickOnTheSubmitButton() 
