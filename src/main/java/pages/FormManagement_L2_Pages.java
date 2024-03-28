@@ -369,8 +369,9 @@ public class FormManagement_L2_Pages extends StartupPage
 			commonEvents.click(widgetsMenu);
 			commonEvents.click(accordionList);
 			commonEvents.click(accordionListToggle);
+			Thread.sleep(3000);
 			textOfPannelTwoBody = commonEvents.getText(accordionListTogglePannel2Text);
-			System.out.println("accordion List Toggle Pannel Text :"+textOfPannelTwoBody);
+			System.out.println("Accordion List Toggle Pannel Text :"+textOfPannelTwoBody);
 		}catch(Exception e) {
 			throw e;
 		}

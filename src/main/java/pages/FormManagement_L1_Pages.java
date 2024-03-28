@@ -56,8 +56,11 @@ public class FormManagement_L1_Pages extends StartupPage
 	By refreshButton = By.xpath("//button[@value='Refresh']");
 	By chooseFile = By.xpath("//input[@id='imagesrc']/..");
 	By uploadImageFileName = By.xpath("//input[@id='imagesrc']");
-
-
+	By interactionNavigationBar = By.xpath("//a[.='Interactions ']");
+	By selectableOption = By.xpath("//a[.='Selectable ']");
+	By serializeOption = By.xpath("//a[.='Serialize ']");
+	By sakinaliumCrossBrowserTestingOption = By.xpath("(//b[.='Sakinalium - Cross Browser Testing'])[2]");
+	By messageAfterClickingSakinaliumCrossBrowserTestingOption = By.id("feedback");
 
 
 	/*
@@ -339,27 +342,8 @@ public class FormManagement_L1_Pages extends StartupPage
 		return isYeardropdownSelected;
 	}
 
-	/**@Test10
-	 * about this method clickOnChooseFilUploadButtonAndUploadImage() 
-	 * @param : String
-	 * @description : click on choose file button and upload the image
-	 * @return : boolean
-	 * @author : Yaksha
-	 */
-	public boolean clickOnChooseFilUploadButtonAndUploadImage(String pathOfTheFile) throws Exception {
-		boolean isUploaded = false;
-		try {
-			Thread.sleep(3000);
-			commonEvents.sendKeys(uploadImageFileName, pathOfTheFile);
-			Thread.sleep(3000); //waiting for the image to display by name
-			isUploaded = true;
-		}catch(Exception e) {
-			throw e;
-		}
-		return isUploaded;
-	}
 
-	/**@Test11
+	/**@Test10
 	 * about this method filltheDetailsAndClickOnTheSubmitButton() 
 	 * @param : Map<String, String>
 	 * @description :click on the register and fill first name text field,lastNameTextbox,,emailAddressTextbox and then click on submit button
@@ -384,6 +368,28 @@ public class FormManagement_L1_Pages extends StartupPage
 			throw e;
 		}
 		return isFilled;
+	}
+	
+	/**@Test11
+	 * about this method afterClickOnSakinaliumCrossBrowserTestingDisplayTheText() 
+	 * @param : null
+	 * @description : click on Interaction Navigation Menu bar, then click on selectable option, then click on Serialize tab, then click on Sakinalium - Cross Browser Testing option. after click on Sakinalium - Cross Browser Testing some text value will display . Fetch that text value
+	 * @return : String
+	 * @author : Yaksha
+	 */
+	public String afterClickOnSakinaliumCrossBrowserTestingDisplayTheText() throws Exception {
+		String messageValue = "";
+		try {
+			commonEvents.click(interactionNavigationBar);
+			commonEvents.click(selectableOption);
+			commonEvents.click(serializeOption);
+			commonEvents.click(sakinaliumCrossBrowserTestingOption);
+			messageValue=commonEvents.getText(messageAfterClickingSakinaliumCrossBrowserTestingOption);
+			System.out.println("Message After Clicking Sakinalium CrossBrowser Testing Option : " +messageValue);
+		}catch(Exception e) {
+			throw e;
+		}
+		return messageValue;
 	}
 
 }

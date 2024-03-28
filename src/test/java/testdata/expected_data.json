@@ -45,7 +45,9 @@
 	},
   	"DragAndDropPage_Title":{
 		"pageTitle":"Drag and Drop"
+	},
+	"Successfull_message":{
+		"Message_After_ClickingSakinaliumCrossBrowserTestingOption":"You've selected: Cross Browser Testing"
 	}
-
 	
 }

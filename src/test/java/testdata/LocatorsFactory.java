@@ -28,6 +28,7 @@ public class LocatorsFactory extends StartupPage {
 	By seleniumWebDriver = By.xpath("//h4[contains(text(), 'Selenium WebDriver')]");
 	By downloadNavigationMenu = By.xpath("//a[@class='nav-link']//span[contains(text(), 'Downloads')]");
 	By seleniumDragAndDropImage = By.xpath("(//img[contains(@src, 'selenium.png')])[1]");
+	By messageAfterClickingSakinaliumCrossBrowserTestingOption = By.id("feedback");
 
 	public LocatorsFactory(WebDriver driver) {
 		super(driver);
@@ -130,6 +131,11 @@ public class LocatorsFactory extends StartupPage {
 	public WebElement seleniumDragAndDropImage(WebDriver driver) {
 		WebElement seleniumDragAndDropImageWebElement = driver.findElement(seleniumDragAndDropImage);
         return seleniumDragAndDropImageWebElement;
+    }
+	
+	public WebElement messageAfterClickingSakinaliumCrossBrowserTestingOptionIsPresent(WebDriver driver) {
+		WebElement messageAfterClickingSakinaliumCrossBrowserTestingOptionWebElement = driver.findElement(messageAfterClickingSakinaliumCrossBrowserTestingOption);
+        return messageAfterClickingSakinaliumCrossBrowserTestingOptionWebElement;
     }
 
 }
